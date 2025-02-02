@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aukr.ug</title>
     <style>
         body {
@@ -13,21 +14,26 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            height: 100vh;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
         }
         h1 {
-            font-size: 3em;
+            font-size: 2.5rem; /* Using rem for responsiveness */
             margin-bottom: 0.5em;
         }
         p {
-            font-size: 1.2em;
+            font-size: 1rem; /* Using rem for responsiveness */
+            max-width: 600px; /* Limit the width for better readability */
+            line-height: 1.5;
         }
     </style>
 </head>
 <body>
     <h1>Wir sind bald für Sie da!</h1>
-    <p>Liebe Gäste, die Gaststätte wird derzeit fleissig umgebaut. </br>Wir freuen uns, Sie bald in neuem Ambiente begrüßen zu dürfen!</p>
-    <p>Bei Fragen oder Anliegen melden Sie sich gerne per E-Mail über info@aukr.ug</p></br>
+    <p>Liebe Gäste, die Gaststätte wird derzeit fleissig umgebaut. <br>Wir freuen uns, Sie bald in neuem Ambiente begrüßen zu dürfen!</p>
+    <p>Bei Fragen oder Anliegen melden Sie sich gerne per E-Mail über info@aukr.ug</p>
     <p>Bis bald, Ihr Team der Gaststätte Aukr.ug</p>
 </body>
 </html>
