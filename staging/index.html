@@ -18,6 +18,84 @@
 				y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
 			})(window, document, "clarity", "script", "q8ued4bua5");
 		</script>
+		<!-- Add this in your HTML head -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+		<!-- Add this HTML where you want the icons -->
+		<div class="social-icons">
+		<a href="#" class="icon facebook" target="_blank" aria-label="Facebook">
+			<i class="fab fa-facebook-f"></i>
+		</a>
+		<a href="#" class="icon twitter" target="_blank" aria-label="Twitter">
+			<i class="fab fa-twitter"></i>
+		</a>
+		<a href="#" class="icon instagram" target="_blank" aria-label="Instagram">
+			<i class="fab fa-instagram"></i>
+		</a>
+		<a href="#" class="icon linkedin" target="_blank" aria-label="LinkedIn">
+			<i class="fab fa-linkedin-in"></i>
+		</a>
+		<a href="#" class="icon youtube" target="_blank" aria-label="YouTube">
+			<i class="fab fa-youtube"></i>
+		</a>
+		</div>
+
+		<style>
+		.social-icons {
+			position: fixed;
+			right: 20px;
+			top: 50%;
+			transform: translateY(-50%);
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+			z-index: 100;
+		}
+
+		.icon {
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			background: #fff;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-decoration: none;
+			box-shadow: 0 0 10px rgba(0,0,0,0.1);
+			transition: all 0.3s ease;
+		}
+
+		.icon i {
+			color: #555;
+			font-size: 1.2rem;
+			transition: all 0.3s ease;
+		}
+
+		/* Hover Effects */
+		.icon:hover {
+			transform: translateY(-5px);
+		}
+
+		.facebook:hover {
+			background: #1877f2;
+		}
+		.twitter:hover {
+			background: #1da1f2;
+		}
+		.instagram:hover {
+			background: #e4405f;
+		}
+		.linkedin:hover {
+			background: #0077b5;
+		}
+		.youtube:hover {
+			background: #ff0000;
+		}
+
+		.icon:hover i {
+			color: white;
+		}
+		</style>
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
