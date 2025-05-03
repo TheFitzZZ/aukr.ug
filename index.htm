@@ -28,13 +28,138 @@
             max-width: 600px; /* Limit the width for better readability */
             line-height: 1.5;
         }
+        
+        /* Countdown Banner */
+        .countdown-banner {
+            background-color: #fc8906;
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 600px;
+            position: relative;
+            overflow: hidden;
+            animation: pulse 2s infinite alternate;
+        }
+        
+        .countdown-banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: rotate(30deg);
+            animation: shine 4s infinite;
+        }
+        
+        .countdown-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .countdown-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .countdown-number {
+            font-size: 1.8rem;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+            padding: 5px 10px;
+            min-width: 60px;
+        }
+        
+        .countdown-label {
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+        
+        /* Animations */
+        @keyframes pulse {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.03);
+            }
+        }
+        
+        @keyframes shine {
+            0% {
+                left: -100%;
+                opacity: 0;
+            }
+            20% {
+                left: 100%;
+                opacity: 0.5;
+            }
+            100% {
+                left: 100%;
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 <body>
     <img src="aukrug-logo-name-right.png" alt="Aukrug Restaurantlogo - Eine untergehende Sonne im Meer mit einem Segelboot" style="max-width: 100%;">
+      <!-- Countdown Banner -->
+    <div class="countdown-banner">
+        <div class="countdown-title">Eröffnung am 16.06.2025</div>
+        <div class="countdown-container">
+            <div class="countdown-item">
+                <div id="days" class="countdown-number">0</div>
+                <div class="countdown-label">Tage</div>
+            </div>
+        </div>
+    </div>
+    
     <h1>Wir sind bald für Sie da!</h1>
     <p>Liebe Gäste, die Gaststätte wird derzeit fleißig umgebaut. <br>Wir freuen uns, Sie bald in neuem Ambiente begrüßen zu dürfen!</p>
     <p>Bei Fragen oder Anliegen melden Sie sich gerne per E-Mail über <a href="mailto:info@aukr.ug" style="color: inherit; text-decoration: underline;">info@aukr.ug</a></p>
     <p>Bis bald, Ihr Team der Gaststätte Aukr.ug</p>
+
+    <!-- Countdown JavaScript -->
+    <script>
+        // Set the opening date - June 16, 2025
+        const openingDate = new Date("June 16, 2025 12:00:00").getTime();
+        
+        // Update the countdown every second
+        const countdown = setInterval(function() {
+            // Get current date and time
+            const now = new Date().getTime();
+            
+            // Find the distance between now and the opening date
+            const distance = openingDate - now;
+            
+            // Time calculations for days, hours, minutes and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+              // Display the results - only days
+            document.getElementById("days").textContent = days;
+            
+            // If the countdown is finished, display a message
+            if (distance < 0) {
+                clearInterval(countdown);
+                document.querySelector(".countdown-title").textContent = "Wir sind jetzt geöffnet!";
+                document.getElementById("days").textContent = "0";
+            }
+        }, 1000);
+    </script>
 </body>
 </html>
