@@ -18,13 +18,41 @@
 			xsmall:   [ '361px',   '480px'  ],
 			xxsmall:  [ null,      '360px'  ]
 		});
-
 	// Play initial animations on page load.
 		$window.on('load', function() {
 			window.setTimeout(function() {
 				$body.removeClass('is-preload');
+				
+				// Adjust the hamburger menu position based on header height
+				adjustHamburgerPosition();
 			}, 100);
 		});
+		
+	// Function to adjust the hamburger menu position when header size changes
+	function adjustHamburgerPosition() {
+		var headerHeight = $('#header').outerHeight();
+		var headerNav = $('#header nav');
+		
+		// Adjust the menu position when window resizes or content changes
+		$(window).on('resize', function() {
+			headerHeight = $('#header').outerHeight();
+		});
+		
+		// Create a ResizeObserver to watch for height changes in the header
+		if (window.ResizeObserver) {
+			const resizeObserver = new ResizeObserver(function(entries) {
+				for (let entry of entries) {
+					if (entry.target.id === 'header') {
+						// Header has changed size, adjust nav position
+						headerHeight = entry.target.offsetHeight;
+					}
+				}
+			});
+			
+			// Start observing the header element
+			resizeObserver.observe(document.getElementById('header'));
+		}
+	}
 
 	// Touch?
 		if (browser.mobile)
