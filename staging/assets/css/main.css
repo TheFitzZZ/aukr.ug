@@ -2831,9 +2831,8 @@ input, select, textarea {
 /* Header */
 
 	#header {
-		padding: 0.1em 0 1.5em 0; /* Added bottom padding to make room for the menu button */
+		padding: 0.1em 0 0.1em 0 ;
 		background-color: #2c2a2a;
-		position: relative; /* Ensure the menu button's absolute positioning is relative to this */
 	}
 
 		#header .logo {
@@ -2868,10 +2867,11 @@ input, select, textarea {
 					width: 2em;
 					height: 2em;
 				}
-	#header nav {
-			position: absolute;
+
+		#header nav {
+			position: fixed;
 			right: 2em;
-			bottom: 0.5em; /* Position it at the bottom of the header with some padding */
+			top: 2em;
 			z-index: 10000;
 		}
 
@@ -2953,14 +2953,17 @@ input, select, textarea {
 						#header nav ul li a[href="#menu"]:hover:after {
 							opacity: 0;
 						}
-		@media screen and (max-width: 736px) {			#header {
-				padding: 0.1em 0 1.2em 0; /* Maintain bottom padding for menu button */
-			}				#header nav {
-					right: 0.5em;
-					bottom: 0.3em; /* Position it slightly closer to bottom on mobile */
-					position: absolute;
-				}
 
+		@media screen and (max-width: 736px) {
+
+			#header {
+				padding: 0.1em 0 0.1em 0 ;
+			}
+
+				#header nav {
+					right: 0.5em;
+					top: 0.5em;
+				}
 
 					#header nav ul li a[href="#menu"]:before, #header nav ul li a[href="#menu"]:after {
 						background-size: 1.5em 1.5em;
@@ -2977,6 +2980,7 @@ input, select, textarea {
 		transition: opacity 0.45s ease;
 		opacity: 1;
 	}
+
 	#menu {
 		-moz-transform: translateX(22em);
 		-webkit-transform: translateX(22em);
@@ -2986,7 +2990,7 @@ input, select, textarea {
 		-webkit-transition: -webkit-transform 0.45s ease, visibility 0.45s;
 		-ms-transition: -ms-transform 0.45s ease, visibility 0.45s;
 		transition: transform 0.45s ease, visibility 0.45s;
-		position: fixed; /* Keep the menu fixed to the viewport */
+		position: fixed;
 		top: 0;
 		right: 0;
 		width: 22em;
