@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Speisekarte – Original-Layout</title>
+
+<!-- Google-Font „Sansita“ wie im PDF -->
+<link href="https://fonts.googleapis.com/css2?family=Sansita:wght@400;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* Grund-Farben aus der PDF */
+:root{
+  --bg-frame:#242222;     /* äußerer, dunkler Rahmen */
+  --bg-paper:#ffffff;     /* „Papier“ */
+  --text:#000;
+}
+
+/* Reset & Basis */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px}
+body{
+  background:var(--bg-frame);
+  font-family:'Sansita',system-ui,Segoe UI,Roboto,sans-serif;
+  color:var(--text);
+  display:flex;
+  justify-content:center;
+  padding:1.8rem;
+}
+
+/* Innenrahmen („Papier“) */
+.page{
+  background:var(--bg-paper);
+  width:100%;
+  max-width:790px;          /* entspricht PDF-Seitenbreite */
+  padding:2.2rem 2.4rem 3rem;
+  box-shadow:0 0 0 1px #d6d6d6 inset; /* feine Linie wie gedruckter Rand */
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:2.5rem 3rem;
+}
+
+/* Kopfzeile */
+.header{
+  grid-column:1 / -1;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  margin-bottom:1.2rem;
+}
+.logo{
+  width:220px;             /* Logo-Breite aus PDF */
+  height:auto;
+}
+.menu-box{
+  background:var(--bg-frame);
+  color:#fff;
+  width:90px;height:90px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  font-size:1rem;
+  font-weight:800;
+  letter-spacing:2px;
+  line-height:1.05;
+}
+
+/* Sektionen & Typografie */
+section{margin-bottom:2.6rem}
+h2{
+  font-size:1.25rem;
+  font-weight:800;
+  letter-spacing:3px;       /* Laufweite ≈ PDF */
+  margin-bottom:.4rem;
+}
+.tagline{
+  font-size:.88rem;
+  font-style:italic;
+  margin-bottom:1.1rem;
+}
+ul{list-style:none}
+.item{margin-bottom:1.35rem}
+.item-name{
+  font-size:.97rem;
+  font-weight:700;
+  letter-spacing:1px;
+}
+.item-desc{
+  font-size:.9rem;
+  line-height:1.4;
+  margin-top:.15rem;
+}
+
+/* Responsive: Ein-Spalten-Flow unter 700 px */
+@media(max-width:700px){
+  .page{
+    grid-template-columns:1fr;
+    gap:1.8rem;
+  }
+  .menu-box{display:none}       /* Black square ausblenden */
+}
+</style>
+</head>
+
+<body>
+<article class="page">
+
+  <!-- Logo + MENU-Square -->
+  <header class="header">
+    <img src="logo-aukrug.png" alt="Aukrug Logo" class="logo">
+    <div class="menu-box">ME<br>NU</div>
+  </header>
+
+  <!-- Linke Spalte -->
+  <section>
+    <h2>ZUM START</h2>
+    <p class="tagline">Kleine Köstlichkeiten für den ersten Appetit</p>
+    <ul>
+      <li class="item">
+        <div class="item-name">TOMATENSUPPE</div>
+        <div class="item-desc">mit Basilikumschaum, dazu hausgemachtes Brot</div>
+      </li>
+      <li class="item">
+        <div class="item-name">MATJESTATAR</div>
+        <div class="item-desc">auf hausgemachtem Vollkornbrot, mit Salat</div>
+      </li>
+      <li class="item">
+        <div class="item-name">CLUB SANDWICH “AUKRUG”</div>
+        <div class="item-desc">wahlweise Matjes oder Hähnchenbrust, dazu Spiegelei, Bacon, Salat &amp; Remoulade<br>
+          Klein / Groß</div>
+      </li>
+    </ul>
+
+    <h2>SALATE</h2>
+    <p class="tagline">Pflanzenpower</p>
+    <ul>
+      <li class="item">
+        <div class="item-name">GROSSER GEMISCHTER SALAT</div>
+        <div class="item-desc">mit Tomate, Gurke &amp; Paprika<br>
+          + gebratene Hähnchenstreifen<br>
+          + gebratener Lachs<br>
+          + Garnelen (5 Stück)<br>
+          Dazu American, French, Joghurt oder Italian&nbsp;Dressing und hausgemachtes&nbsp;Brot</div>
+      </li>
+    </ul>
+
+    <h2>PASTA</h2>
+    <p class="tagline">Dolce Vita am Deich</p>
+    <ul>
+      <li class="item">
+        <div class="item-name">SCHINKEN-CHAMPIGNON</div>
+        <div class="item-desc">in Sahnesauce</div>
+      </li>
+      <li class="item">
+        <div class="item-name">GARNELEN</div>
+        <div class="item-desc">in Tomatensauce</div>
+      </li>
+      
+      <h2>KLEINE GÄSTE</h2>
+    <p class="tagline">Lieblingsessen für Abenteurer</p>
+    <ul>
+      <li class="item">
+        <div class="item-name">POMMESPIRATEN</div>
+        <div class="item-desc">Hähnchen-Nuggets mit Pommes</div>
+      </li>
+      <li class="item">
+        <div class="item-name">KÜSTENSCHNUPPERER</div>
+        <div class="item-desc">Fischstäbchen mit Pommes</div>
+      </li>
+      <li class="item">
+        <div class="item-name">NUDELHELDEN</div>
+        <div class="item-desc">Kleine Portion Pasta mit</div>
+        <div class="item-desc">Tomatensauce oder Butter</div>
+      </li>
+      <li class="item">
+        <div class="item-name">RÄUBERTELLER</div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Rechte Spalte -->
+  <section>
+    <h2>UNSERE KLASSIKER</h2>
+    <p class="tagline">Herzhaft und sättigend</p>
+    <ul>
+      <li class="item">
+        <div class="item-name">GRILLTELLER “BORSFLETH”</div>
+        <div class="item-desc">Rind, Hähnchen &amp; Schweinefleisch, mit Pommes &amp; Salat</div>
+      </li>
+      <li class="item">
+        <div class="item-name">SCHLEUSENSTEAK</div>
+        <div class="item-desc">Rumpsteak mit Senfkruste, Speckbohnen &amp; Rösti</div>
+      </li>
+      <li class="item">
+        <div class="item-name">CURRYWURST</div>
+        <div class="item-desc">mit Pommes &amp; Beilagensalat</div>
+      </li>
+      <li class="item">
+        <div class="item-name">SCHNITZEL “WIENER ART”</div>
+        <div class="item-desc">mit Pommes &amp; Beilagensalat<br>
+          + Champignonrahm- oder Paprikarahmsauce<br>
+          + Bratkartoffeln auf Wunsch</div>
+      </li>
+    </ul>
+
+    <h2>GOLD AUS DER ERDE</h2>
+    <p class="tagline">Ofenkartoffel in köstlichen Variationen</p>
+    <ul>
+      <li class="item">
+        <div class="item-name">OFENKARTOFFEL CLASSIC</div>
+        <div class="item-desc">mit Sour Cream &amp; Salatbeilage</div>
+      </li>
+      <li class="item">
+        <div class="item-name">OFENKARTOFFEL LACHS</div>
+        <div class="item-desc">mit cremigem Blattspinat &amp; gegrilltem Lachs</div>
+      </li>
+      <li class="item">
+        <div class="item-name">OFENKARTOFFEL HÄHNCHEN</div>
+        <div class="item-desc">mit cremigem Blattspinat &amp; gebratenen Hähnchenstreifen</div>
+      </li>
+      <li class="item">
+        <div class="item-name">OFENKARTOFFEL TEX-MEX</div>
+        <div class="item-desc">mit Chili con Carne, Sour Cream &amp; Nachos</div>
+      </li>
+    </ul>
+  </section>
+
+</article>
+</body>
+</html>
