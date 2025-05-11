@@ -2911,9 +2911,9 @@ input, select, textarea {
 
 					#header nav ul li a[href="#menu"] {
 						-webkit-tap-highlight-color: transparent;
-						width: 4em;
+						width: 3em;
 						text-indent: 4em;
-						font-size: 1em;
+						/* font-size: 1em; */
 						overflow: hidden;
 						padding: 0;
 						white-space: nowrap;
