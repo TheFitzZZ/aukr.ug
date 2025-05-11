@@ -2897,7 +2897,7 @@ input, select, textarea {
 					#header nav ul li a {
 						display: block;
 						position: relative;
-						height: 5em;
+						height: 3em;
 						line-height: 3em;
 						padding: 0 1.5em;
 						background-color: rgba(255, 255, 255, 0.5);
@@ -2911,7 +2911,7 @@ input, select, textarea {
 
 					#header nav ul li a[href="#menu"] {
 						-webkit-tap-highlight-color: transparent;
-						width: 5em;
+						width: 3em;
 						text-indent: 4em;
 						/* font-size: 1em; */
 						overflow: hidden;
@@ -2963,8 +2963,6 @@ input, select, textarea {
 				#header nav {
 					right: 0.5em;
 					top: 0.5em;
-					width: 3em;
-					height: 3em;
 				}
 
 					#header nav ul li a[href="#menu"]:before, #header nav ul li a[href="#menu"]:after {
