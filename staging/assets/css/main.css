@@ -3329,10 +3329,9 @@ input, select, textarea {
 		}
 
 /* Wrapper */
-
 	#wrapper > * > .inner {
 		width: 100%;
-		max-width: 68em;
+		max-width: 980px;
 		margin: 0 auto;
 		padding: 0 2.5em;
 	}
