@@ -245,13 +245,52 @@
             border-radius: 50%;
             backdrop-filter: blur(10px);
             border: 2px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .flyer-cta {
+        }        .flyer-cta {
             margin-top: 15px;
             font-size: 0.9rem;
             color: #34495e;
             font-weight: 500;
+        }
+
+        /* Flyer Countdown Styles */
+        .flyer-countdown {
+            margin: 15px 0;
+            padding: 10px 20px;
+            background: linear-gradient(45deg, #ff6b6b, #ffa500);
+            border-radius: 25px;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+            display: inline-block;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        .flyer-countdown-text {
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .flyer-countdown-number {
+            color: white;
+            font-size: 1.4rem;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 2px 8px;
+            border-radius: 10px;
+            margin: 0 5px;
+            display: inline-block;
+            min-width: 30px;
+            text-align: center;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+            }
+            to {
+                box-shadow: 0 6px 25px rgba(255, 107, 107, 0.6);
+            }
         }
 
         /* Fullscreen Modal */
@@ -398,20 +437,12 @@
 					<div id="main">
 						<div class="inner" style="margin-top: 20px;">
 
-							  <!-- Countdown Banner -->
-    <div class="countdown-banner">
-        <div class="countdown-title">Eröffnung am 13.06.2025</div>
-        <div class="countdown-container">
-            <div class="countdown-item">
-                <div id="days" class="countdown-number">0</div>
-                <div class="countdown-label">Tage</div>
-            </div>
-        </div>
-    </div>
-
-                            <!-- Opening Flyer Section -->
+                        <!-- Opening Flyer Section -->
                             <div class="flyer-section">
-                                <h2 class="flyer-title">🎉 Eröffnungsfeier</h2>
+                                <div class="flyer-countdown">
+                                    <span class="flyer-countdown-text">Noch </span>
+                                    <span id="flyer-days" class="flyer-countdown-number">0</span>
+                                </div>
                                 <p class="flyer-subtitle">Seien Sie dabei und feiern Sie mit uns!</p>
                                 <div class="flyer-preview" onclick="openFlyerModal()">
                                     <img src="images/aukrug_eroeffnung.png" alt="Eröffnungsflyer Aukrug Borsfleth" />
@@ -525,15 +556,16 @@ Nach einem Besitzerwechsel und umfassender Erneuerung öffnet der Aukrug nun wie
 					const days = Math.floor(distance / (1000 * 60 * 60 * 24));
 					const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 					const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-					const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-					// Display the results - only days
+					const seconds = Math.floor((distance % (1000 * 60)) / 1000);					// Display the results - only days
 					document.getElementById("days").textContent = days;
+					document.getElementById("flyer-days").textContent = days;
 					
 					// If the countdown is finished, display a message
 					if (distance < 0) {
 						clearInterval(countdown);
 						document.querySelector(".countdown-title").textContent = "Wir sind jetzt geöffnet!";
 						document.getElementById("days").textContent = "0";
+						document.querySelector(".flyer-countdown").innerHTML = '<span class="flyer-countdown-text">🎉 Wir sind jetzt geöffnet! 🎉</span>';
 					}
 				}, 1000);
 
