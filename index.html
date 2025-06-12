@@ -101,70 +101,6 @@
 			color: white;
 		}
 
-		/* Countdown Banner */
-        .countdown-banner {
-            background: linear-gradient(to bottom right, #ffde00, #ff3b3b);
-            color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            width: 100%;
-            max-width: 600px;
-            position: center;
-            overflow: hidden;
-            animation: pulse 2s infinite alternate;
-			text-align: center;
-			margin-left: auto;
-			margin-right: auto;
-			display: block;
-        }
-        
-        .countdown-banner::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: rgba(255, 255, 255, 0.1);
-            transform: rotate(30deg);
-            animation: shine 4s infinite;
-        }
-        
-        .countdown-title {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            font-weight: bold;
-        }
-        
-        .countdown-container {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-        
-        .countdown-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .countdown-number {
-            font-size: 1.8rem;
-            font-weight: bold;
-            background-color: rgba(0, 0, 0, 0.2);
-            border-radius: 4px;
-            padding: 5px 10px;
-            min-width: 60px;
-			text-align: center;
-        }
-        
-        .countdown-label {
-            font-size: 0.8rem;
-            margin-top: 5px;
-			text-align: center;
-        }
 
         /* Opening Flyer Styles */
         .flyer-section {
@@ -253,47 +189,6 @@
             font-weight: 500;
         }
 
-        /* Flyer Countdown Styles */
-        .flyer-countdown {
-            margin: 15px 0;
-            padding: 10px 20px;
-            background: linear-gradient(45deg, #ff6b6b, #ffa500);
-            border-radius: 25px;
-            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
-            display: inline-block;
-            animation: glow 2s ease-in-out infinite alternate;
-        }
-
-        .flyer-countdown-text {
-            color: white;
-            font-size: 1.1rem;
-            font-weight: 500;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-        }
-
-        .flyer-countdown-number {
-            color: white;
-            font-size: 1.4rem;
-            font-weight: bold;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 2px 8px;
-            border-radius: 10px;
-            margin: 0 5px;
-            display: inline-block;
-            min-width: 30px;
-            text-align: center;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-        }
-
-        @keyframes glow {
-            from {
-                box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
-            }
-            to {
-                box-shadow: 0 6px 25px rgba(255, 107, 107, 0.6);
-            }
-        }
-
         /* Fullscreen Modal */
         .flyer-modal {
             display: none;
@@ -365,17 +260,7 @@
                 font-size: 1rem;
             }
         }
-        
-        /* Animations */
-        @keyframes pulse {
-            from {
-                transform: scale(1);
-            }
-            to {
-                transform: scale(1.03);
-            }
-        }
-        
+          /* Animations */
         @keyframes shine {
             0% {
                 left: -100%;
@@ -436,14 +321,8 @@
 
 				<!-- Main -->
 					<div id="main">
-						<div class="inner" style="margin-top: 20px;">                        <!-- Opening Flyer Section -->
-                            <div class="flyer-section">
+						<div class="inner" style="margin-top: 20px;">                        <!-- Opening Flyer Section -->                            <div class="flyer-section">
                                 <h2 class="flyer-title">🎉 Eröffnungsfeier</h2>
-                                <div class="flyer-countdown">
-                                    <span class="flyer-countdown-text">Noch </span>
-                                    <span id="flyer-days" class="flyer-countdown-number">0</span>
-                                    <span class="flyer-countdown-text"> Tage bis zur Eröffnung!</span>
-                                </div>
                                 <p class="flyer-subtitle">Seien Sie dabei und feiern Sie mit uns!</p>
                                 <div class="flyer-preview" onclick="openFlyerModal()">
                                     <img src="images/aukrug_eroeffnung.png" alt="Eröffnungsflyer Aukrug Borsfleth" />
@@ -539,41 +418,8 @@ Nach einem Besitzerwechsel und umfassender Erneuerung öffnet der Aukrug nun wie
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			
-			<!-- Countdown JavaScript -->
+					<!-- Flyer Modal JavaScript -->
 			<script>
-				// Set the opening date - June 13, 2025
-				const openingDate = new Date("June 13, 2025 17:30:00").getTime();
-				
-				// Update the countdown every second
-				const countdown = setInterval(function() {
-					// Get current date and time
-					const now = new Date().getTime();
-					
-					// Find the distance between now and the opening date
-					const distance = openingDate - now;
-							// Time calculations for days, hours, minutes and seconds
-					const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-					const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-					const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-					const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-					
-					// Display the results - update flyer days
-					const flyerDaysElement = document.getElementById("flyer-days");
-					if (flyerDaysElement) {
-						flyerDaysElement.textContent = days;
-					}
-					
-					// If the countdown is finished, display a message
-					if (distance < 0) {
-						clearInterval(countdown);
-						const flyerCountdownElement = document.querySelector(".flyer-countdown");
-						if (flyerCountdownElement) {
-							flyerCountdownElement.innerHTML = '<span class="flyer-countdown-text">🎉 Wir sind jetzt geöffnet! 🎉</span>';
-						}
-					}
-				}, 1000);
-
 				// Flyer Modal Functions
 				function openFlyerModal() {
 					document.getElementById('flyerModal').style.display = 'block';
@@ -583,7 +429,9 @@ Nach einem Besitzerwechsel und umfassender Erneuerung öffnet der Aukrug nun wie
 				function closeFlyerModal() {
 					document.getElementById('flyerModal').style.display = 'none';
 					document.body.style.overflow = 'auto'; // Restore scrolling
-				}				// Close modal when pressing Escape key
+				}
+
+				// Close modal when pressing Escape key
 				document.addEventListener('keydown', function(event) {
 					if (event.key === 'Escape') {
 						closeFlyerModal();
