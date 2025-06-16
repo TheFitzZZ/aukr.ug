@@ -125,139 +125,78 @@
             color: #7f8c8d;
             margin-bottom: 20px;
             font-style: italic;
-        }
-
-        .flyer-preview {
-            position: relative;
-            display: inline-block;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-            max-width: 100%;
-        }
-
-        .flyer-preview:hover {
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-        }
-
-        .flyer-preview img {
-            max-width: 500px;
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: all 0.3s ease;
-        }
-
-        .flyer-preview:hover img {
-            filter: brightness(1.1);
-        }
-
-        .flyer-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-            opacity: 0;
-        }
-
-        .flyer-preview:hover .flyer-overlay {
-            background: rgba(0, 0, 0, 0.3);
-            opacity: 1;
-        }
-
-        .flyer-zoom-icon {
-            color: white;
-            font-size: 3rem;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 15px;
-            border-radius: 50%;
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(255, 255, 255, 0.3);
-        }        .flyer-cta {
+        }.flyer-cta {
             margin-top: 15px;
             font-size: 0.9rem;
             color: #34495e;
             font-weight: 500;
         }
 
-        /* Fullscreen Modal */
-        .flyer-modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            animation: fadeIn 0.3s ease;
-        }
-
-        .flyer-modal-content {
-            position: relative;
-            margin: auto;
-            padding: 20px;
-            width: 90%;
-            height: 90%;
+        /* Opening Hours Styles */
+        .opening-hours {
+            margin: 20px 0;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            flex-direction: column;
+            gap: 12px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .flyer-modal img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
+        .opening-day {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             border-radius: 10px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-        }        
-		
-		.flyer-close {
-            position: absolute;
-            top: 5em;
-            right: 1.5em;
-            color: #fff;
-            font-size: 30px;
-            font-weight: bold;
-            cursor: pointer;
-            z-index: 1001;
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
             transition: all 0.3s ease;
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(255, 255, 255, 0.3);
-        }        .flyer-close:hover {
-            color: #ff6b6b;
-            transform: scale(1.1);
-            background: rgba(255, 107, 107, 0.2);
         }
 
-        /* Mobile Responsive */
+        .opening-day:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .opening-day .day {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .opening-day .time {
+            font-weight: 500;
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 4px 12px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }        /* Mobile Responsive */
         @media screen and (max-width: 768px) {
-            .flyer-preview img {
-                max-width: 350px;
-            }
-            
             .flyer-title {
                 font-size: 1.5rem;
             }
             
             .flyer-subtitle {
                 font-size: 1rem;
+            }
+
+            .opening-hours {
+                max-width: 350px;
+            }
+
+            .opening-day {
+                padding: 10px 15px;
+            }
+
+            .opening-day .day {
+                font-size: 1rem;
+            }
+
+            .opening-day .time {
+                font-size: 0.9rem;
+                padding: 3px 8px;
             }
         }
           /* Animations */
@@ -321,24 +260,25 @@
 
 				<!-- Main -->
 					<div id="main">
-						<div class="inner" style="margin-top: 20px;">                        <!-- Opening Flyer Section -->                            <div class="flyer-section">
-                                <h2 class="flyer-title">🎉 Eröffnungsfeier</h2>
-                                <p class="flyer-subtitle">Seien Sie dabei und feiern Sie mit uns!</p>
-                                <div class="flyer-preview" onclick="openFlyerModal()">
-                                    <img src="images/aukrug_eroeffnung.png" alt="Eröffnungsflyer Aukrug Borsfleth" />
-                                    <div class="flyer-overlay">
-                                        <i class="fas fa-search-plus flyer-zoom-icon"></i>
+						<div class="inner" style="margin-top: 20px;">                        <!-- Opening Hours Section -->
+                            <div class="flyer-section">
+                                <h2 class="flyer-title">🥳 Wir haben eröffnet!</h2>
+                                
+                                <div class="opening-hours">
+                                    <div class="opening-day">
+                                        <span class="day">Freitag</span>
+                                        <span class="time">17:30–23:00</span>
+                                    </div>
+                                    <div class="opening-day">
+                                        <span class="day">Samstag</span>
+                                        <span class="time">11:00–23:00</span>
+                                    </div>
+                                    <div class="opening-day">
+                                        <span class="day">Sonntag</span>
+                                        <span class="time">11:00–22:00</span>
                                     </div>
                                 </div>
-                                <p class="flyer-cta">👆 Klicken Sie auf den Flyer für eine vergrößerte Ansicht</p>
-                            </div>
-
-                            <!-- Fullscreen Flyer Modal -->
-                            <div id="flyerModal" class="flyer-modal" onclick="closeFlyerModal()">
-                                <span class="flyer-close">&times;</span>
-                                <div class="flyer-modal-content">
-                                    <img src="images/aukrug_eroeffnung.png" alt="Eröffnungsflyer Aukrug Borsfleth - Vollansicht" />
-                                </div>
+                                <p class="flyer-cta">Montag bis Donnerstag geschlossen - Küche derzeit mit kleinerer Karte</p>
                             </div>
 
                             <header>
@@ -418,26 +358,6 @@ Nach einem Besitzerwechsel und umfassender Erneuerung öffnet der Aukrug nun wie
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-					<!-- Flyer Modal JavaScript -->
-			<script>
-				// Flyer Modal Functions
-				function openFlyerModal() {
-					document.getElementById('flyerModal').style.display = 'block';
-					document.body.style.overflow = 'hidden'; // Prevent background scrolling
-				}
-
-				function closeFlyerModal() {
-					document.getElementById('flyerModal').style.display = 'none';
-					document.body.style.overflow = 'auto'; // Restore scrolling
-				}
-
-				// Close modal when pressing Escape key
-				document.addEventListener('keydown', function(event) {
-					if (event.key === 'Escape') {
-						closeFlyerModal();
-					}
-				});
-			</script>
 
 	</body>
 </html>
