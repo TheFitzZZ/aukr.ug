@@ -39,6 +39,85 @@
         .icon:hover{transform:translateY(-5px)}
         .facebook:hover{background:#1877f2}.tel:hover{background:#1df24b}.instagram:hover{background:#e4405f}.map:hover{background:#56b7eb}.icon:hover i{color:#fff}
 
+        /* ---------- Opening Times Header Styles ---------- */
+        .opening-times-header {
+            text-align: center;
+            padding: 12px 0;
+            background-color: #2c2a2a;
+            margin: 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .flyer-title {
+            font-size: 1rem;
+            color: #ffffff;
+            margin-bottom: 8px;
+            font-weight: bold;
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .flyer-cta {
+            font-size: 0.75rem;
+            color: #cccccc;
+            margin-top: 5px;
+        }
+
+        /* Opening Hours Styles */
+        .opening-hours {
+            display: inline-flex;
+            gap: 8px;
+            margin: 0;
+            align-items: center;
+        }
+
+        .opening-day {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 4px 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .opening-day:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .opening-day .day {
+            font-weight: 600;
+        }
+
+        .opening-day .time {
+            font-weight: 400;
+            opacity: 0.9;
+        }
+
+        /* Animations */
+        @keyframes shine {
+            0% {
+                left: -100%;
+                opacity: 0;
+            }
+            20% {
+                left: 100%;
+                opacity: 0.5;
+            }
+            100% {
+                left: 100%;
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
         /* ---------- Scoped Styles for the injected PDF‑menu fragment ---------- */
         .speisekarte{--bg-frame:#242222;--bg-paper:#ffffff;--text:#000;background:var(--bg-frame);color:var(--text);font-family:'Sansita',system-ui,'Segoe UI',Roboto,sans-serif;display:flex;justify-content:center;padding:1.8rem;margin-top:2rem}
         .speisekarte .page{background:var(--bg-paper);width:100%;max-width:790px;padding:2.2rem 2.4rem 3rem;box-shadow:0 0 0 1px #d6d6d6 inset;display:grid;grid-template-columns:1fr 1fr;gap:2.5rem 3rem}
@@ -58,7 +137,7 @@
             .speisekarte .menu-box{display:none}
             .speisekarte .logo{width:100%;max-height:auto}
         }
-        </style>
+    </style>
     </head>
     <body class="is-preload">
         <!-- Wrapper -->
@@ -71,12 +150,10 @@
                             <!-- Logo -->
                                 <a href="index.html" class="logo">
                                     <span class="logo"><img src="images/aukrug-logo-name-right.png" alt="Aukrug Restaurantlogo - Eine untergehende Sonne im Meer mit einem Segelboot" /></span>
-                                </a>
-
-                            <!-- Nav -->
+                                </a>                            <!-- Nav -->
                                 <nav>
                                     <ul>
-                                        <li><a href="#menu">Menu</a></li>
+                                        <li><a href="#menu">Menü</a></li>
                                     </ul>
                                 </nav>
 
@@ -96,6 +173,26 @@
                             <li><a href="datenschutz.html">Datenschutz</a></li>
                         </ul>
                     </nav>
+
+                <!-- Opening Times Section -->
+                <div class="opening-times-header">
+                    <h2 class="flyer-title">🥳 Wir haben eröffnet!</h2>
+                    <div class="opening-hours">
+                        <div class="opening-day">
+                            <span class="day">Fr</span>
+                            <span class="time">17:30–21:00</span>
+                        </div>
+                        <div class="opening-day">
+                            <span class="day">Sa</span>
+                            <span class="time">11:00–21:00</span>
+                        </div>
+                        <div class="opening-day">
+                            <span class="day">So</span>
+                            <span class="time">11:00–21:00</span>
+                        </div>
+                    </div>
+                    <div class="flyer-cta">Mo-Do geschlossen | Küche mit kleinerer Karte</div>
+                </div>
 
                 <!-- Main -->
                     <div id="main">
