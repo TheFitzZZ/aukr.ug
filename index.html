@@ -99,80 +99,61 @@
 		} */
 		.icon:hover i {
 			color: white;
-		}
-
-
-        /* Opening Flyer Styles */
-        .flyer-section {
+		}        /* Opening Times Header Styles */
+        .opening-times-header {
             text-align: center;
-            margin: 30px 0;
-            padding: 20px;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 12px 0;
+            background-color: #2c2a2a;
+            margin: 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .flyer-title {
-            font-size: 1.8rem;
-            color: #2c3e50;
-            margin-bottom: 15px;
+            font-size: 1rem;
+            color: #ffffff;
+            margin-bottom: 8px;
             font-weight: bold;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .flyer-subtitle {
-            font-size: 1.1rem;
-            color: #7f8c8d;
-            margin-bottom: 20px;
-            font-style: italic;
-        }.flyer-cta {
-            margin-top: 15px;
-            font-size: 0.9rem;
-            color: #34495e;
-            font-weight: 500;
+            display: inline-block;
+            margin-right: 20px;
+        }        .flyer-cta {
+            font-size: 0.75rem;
+            color: #cccccc;
+            margin-top: 5px;
         }
 
         /* Opening Hours Styles */
         .opening-hours {
-            margin: 20px 0;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            max-width: 400px;
-            margin-left: auto;
-            margin-right: auto;
+            display: inline-flex;
+            gap: 8px;
+            margin: 0;
+            align-items: center;
         }
 
         .opening-day {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            padding: 12px 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 10px;
+            gap: 4px;
+            padding: 4px 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
             color: white;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.8rem;
             transition: all 0.3s ease;
         }
 
         .opening-day:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+            background: rgba(255, 255, 255, 0.15);
         }
 
         .opening-day .day {
             font-weight: 600;
-            font-size: 1.1rem;
         }
 
         .opening-day .time {
-            font-weight: 500;
-            font-size: 1rem;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 4px 12px;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-        }        /* Mobile Responsive */
+            font-weight: 400;
+            opacity: 0.9;
+        }/* Mobile Responsive */
         @media screen and (max-width: 768px) {
             .flyer-title {
                 font-size: 1.5rem;
@@ -255,32 +236,28 @@
 							<li><a href="ueberuns.html">Über uns</a></li>
 							<li><a href="impressum.html">Impressum</a></li>
 							<li><a href="datenschutz.html">Datenschutz</a></li>
-						</ul>
-					</nav>
+						</ul>					</nav>				<!-- Opening Times Section -->
+				<div class="opening-times-header">
+					<h2 class="flyer-title">🥳 Wir haben eröffnet!</h2>
+					<div class="opening-hours">
+						<div class="opening-day">
+							<span class="day">Fr</span>
+							<span class="time">17:30–21:00</span>
+						</div>
+						<div class="opening-day">
+							<span class="day">Sa</span>
+							<span class="time">11:00–21:00</span>
+						</div>
+						<div class="opening-day">
+							<span class="day">So</span>
+							<span class="time">11:00–21:00</span>
+						</div>
+					</div>
+					<div class="flyer-cta">Mo-Do geschlossen | Küche mit kleinerer Karte</div>
+				</div>
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner" style="margin-top: 20px;">                        <!-- Opening Hours Section -->
-                            <div class="flyer-section">
-                                <h2 class="flyer-title">🥳 Wir haben eröffnet!</h2>
-                                
-                                <div class="opening-hours">
-                                    <div class="opening-day">
-                                        <span class="day">Freitag</span>
-                                        <span class="time">17:30–21:00</span>
-                                    </div>
-                                    <div class="opening-day">
-                                        <span class="day">Samstag</span>
-                                        <span class="time">11:00–21:00</span>
-                                    </div>
-                                    <div class="opening-day">
-                                        <span class="day">Sonntag</span>
-                                        <span class="time">11:00–21:00</span>
-                                    </div>
-                                </div>
-                                <p class="flyer-cta">Montag bis Donnerstag geschlossen - Küche derzeit mit kleinerer Karte</p>
-                            </div>
-
+				<!-- Main -->					<div id="main">
+						<div class="inner" style="margin-top: 20px;">
                             <header>
                                 <h1>Willkommen im Aukrug Borsfleth!</a></h1>
                                 <p><b>Schön, dass Sie da sind!</b> </br> Mit viel Herz und Engagement erwecken wir die traditionsreiche Gaststätte Aukrug zu neuem Leben – als lebendigen Treffpunkt für unser Dorf, als einladende Anlaufstelle für Gruppen, Vereine und Radfahrer sowie als idyllischen Ort für alle, die auf ihrer Tour eine Auszeit suchen.
