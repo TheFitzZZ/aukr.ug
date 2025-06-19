@@ -36,8 +36,65 @@
         }
         .icon{width:40px;height:40px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 0 10px rgba(0,0,0,.1);transition:.3s ease}
         .icon i{color:#555;font-size:1.2rem;transition:.3s ease}
-        .icon:hover{transform:translateY(-5px)}
-        .facebook:hover{background:#1877f2}.tel:hover{background:#1df24b}.instagram:hover{background:#e4405f}.map:hover{background:#56b7eb}.icon:hover i{color:#fff}
+        .icon:hover{transform:translateY(-5px)}        .facebook:hover{background:#1877f2}.tel:hover{background:#1df24b}.instagram:hover{background:#e4405f}.map:hover{background:#56b7eb}.icon:hover i{color:#fff}
+
+        /* Opening Times Header Styles */
+        .opening-times-header {
+            text-align: center;
+            padding: 12px 0;
+            background-color: #2c2a2a;
+            margin: 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .flyer-title {
+            font-size: 1rem;
+            color: #ffffff;
+            margin-bottom: 8px;
+            font-weight: bold;
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .flyer-cta {
+            font-size: 0.75rem;
+            color: #cccccc;
+            margin-top: 5px;
+        }
+
+        /* Opening Hours Styles */
+        .opening-hours {
+            display: inline-flex;
+            gap: 8px;
+            margin: 0;
+            align-items: center;
+        }
+
+        .opening-day {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 4px 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .opening-day:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .opening-day .day {
+            font-weight: 600;
+        }
+
+        .opening-day .time {
+            font-weight: 400;
+            opacity: 0.9;
+        }
 
         /* ---------- Scoped Styles for the injected PDF‑menu fragment ---------- */
         .speisekarte{--bg-frame:#242222;--bg-paper:#ffffff;--text:#000;background:var(--bg-frame);color:var(--text);font-family:'Sansita',system-ui,'Segoe UI',Roboto,sans-serif;display:flex;justify-content:center;padding:1.8rem;margin-top:2rem}
@@ -94,8 +151,27 @@
                             <li><a href="ueberuns.html">Über uns</a></li>
                             <li><a href="impressum.html">Impressum</a></li>
                             <li><a href="datenschutz.html">Datenschutz</a></li>
-                        </ul>
-                    </nav>
+                        </ul>                    </nav>
+
+                <!-- Opening Times Section -->
+                <div class="opening-times-header">
+                    <h2 class="flyer-title">🥳 Wir haben eröffnet!</h2>
+                    <div class="opening-hours">
+                        <div class="opening-day">
+                            <span class="day">Fr</span>
+                            <span class="time">17:30–21:00</span>
+                        </div>
+                        <div class="opening-day">
+                            <span class="day">Sa</span>
+                            <span class="time">11:00–21:00</span>
+                        </div>
+                        <div class="opening-day">
+                            <span class="day">So</span>
+                            <span class="time">11:00–21:00</span>
+                        </div>
+                    </div>
+                    <div class="flyer-cta">Mo-Do geschlossen | Küche mit kleinerer Karte</div>
+                </div>
 
                 <!-- Main -->
                     <div id="main">
@@ -104,124 +180,12 @@
                             <p><b>Frisch, regional, besonders – Unsere Küche</b><br>
                             Wir setzen auf Qualität statt Quantität: Unsere kleine, sorgfältig zusammengestellte Speisekarte bietet Ihnen beliebte Klassiker und regionale Spezialitäten. Zusätzlich überraschen wir Sie regelmäßig mit saisonalen Gerichten und besonderen Highlights. Ob deftige Hausmannskost oder leichte Sommergerichte – bei uns ist für jeden Geschmack etwas dabei.<br>
                             Freuen Sie sich auf ehrliche Küche und liebevoll zubereitete Speisen in gemütlicher Atmosphäre.</p>
+
+
+                            <p>Zum Start haben wir eine kleinere Karte mit ausgewählten Gerichten für Sie.</p>
+                            </div>
 							
-							<b>Unsere vorläufige Karte:</b>
-
-                          <!-- Injected PDF-style menu fragment START -->
-<div class="speisekarte">
-  <article class="page">
-    <!-- Logo + MENU-Square -->
-    <header class="header">
-      <img src="images/aukrug-logo.png" alt="Aukrug Logo" class="logo">
-      <div class="menu-box">ME<br>NU</div>
-    </header>
-
-    <!-- Linke Spalte -->
-    <section>
-      <h2>ZUM START</h2>
-      <p class="tagline">Kleine Köstlichkeiten für den ersten Appetit</p>
-      <ul>
-        <li class="item">
-          <div class="item-name">TOMATENSUPPE</div>
-          <div class="item-desc">mit Basilikumschaum, dazu Baguette Brot</div>
-          <div class="item-price">6 €</div>
-        </li>
-        <li class="item">
-          <div class="item-name">MATJESTATAR</div>
-          <div class="item-desc">auf hausgemachtem Vollkornbrot, mit Salat</div>
-          <div class="item-price">11 €</div>
-        </li>
-      </ul>
-
-      <h2>PASTA</h2>
-      <p class="tagline">Dolce Vita am Deich</p>
-      <ul>
-        <li class="item">
-          <div class="item-name">GARNELEN</div>
-          <div class="item-desc">in Tomatensauce</div>
-          <div class="item-price">17 €</div>
-        </li>
-      </ul>
-
-      <!-- GOLD AUS DER ERDE jetzt links -->
-      <h2>GOLD AUS DER ERDE</h2>
-      <p class="tagline">Ofenkartoffel in köstlichen Variationen</p>
-      <ul>
-        <li class="item">
-          <div class="item-name">OFENKARTOFFEL CLASSIC</div>
-          <div class="item-desc">mit Sour Cream &amp; Salatbeilage</div>
-          <div class="item-price">10 €</div>
-        </li>
-        <li class="item">
-          <div class="item-name">OFENKARTOFFEL TEX-MEX</div>
-          <div class="item-desc">mit Chili con Carne, Sour Cream &amp; Nachos, überbacken mit Käse</div>
-          <div class="item-price">15 €</div>
-        </li>
-      </ul>
-
-      <h2>ZUM DAHINSCHMELZEN</h2>
-      <p class="tagline">Leckeres Eis aus unserem Packeis-Sortiment</p>
-      <ul>
-        <li class="item">
-          <div class="item-desc">Erdbeer, Himbeer, Stracciatella, Schokolade, Vanille, Keks, Zitrone Minze, Joghurt Blaubeer, Orange, Pistazie</div>
-          <div class="item-price">3 €</div>
-        </li>
-      </ul>
-    </section>
-
-    <!-- Rechte Spalte -->
-    <section>
-      <h2>UNSERE KLASSIKER</h2>
-      <p class="tagline">Herzhaft und sättigend</p>
-      <ul>
-        <li class="item">
-          <div class="item-name">CURRYWURST</div>
-          <div class="item-desc">mit Pommes &amp; Beilagensalat</div>
-          <div class="item-price">9 €</div>
-        </li>
-        <li class="item">
-          <div class="item-name">SCHNITZEL “WIENER ART”</div>
-          <div class="item-desc">
-            mit Pommes &amp; Beilagensalat<br>
-            <i>+ Champignonrahm- oder Paprikarahmsauce (+ 3 €)</i>
-          </div>
-          <div class="item-price">15 €</div>
-        </li>
-      </ul>
-
-      <!-- KLEINE GÄSTE jetzt rechts -->
-      <h2>KLEINE GÄSTE</h2>
-      <p class="tagline">Lieblingsessen für Abenteurer</p>
-      <ul>
-        <li class="item">
-          <div class="item-name">POMMESPIRATEN</div>
-          <div class="item-desc">Hähnchen-Nuggets mit Pommes</div>
-          <div class="item-price">8 €</div>
-        </li>
-        <li class="item">
-          <div class="item-name">KÜSTENSCHNUPPERER</div>
-          <div class="item-desc">Fischstäbchen mit Pommes</div>
-          <div class="item-price">8 €</div>
-        </li>
-        <li class="item">
-          <div class="item-name">NUDELHELDEN</div>
-          <div class="item-desc">Kleine Portion Pasta mit Tomatensauce oder Butter</div>
-          <div class="item-price">6 €</div>
-        </li>
-        <li class="item">
-          <div class="item-name">RÄUBERTELLER</div>
-          <div class="item-price">0 €</div>
-        </li>
-      </ul>
-    </section>
-  </article>
-</div>
-<!-- Injected PDF-style menu fragment END -->
-
-
-
-                        </div>
-                    </div>
+					
 
                 <!-- Footer -->
                     <footer id="footer">
