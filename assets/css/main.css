@@ -2577,15 +2577,24 @@ input, select, textarea {
 	}
 
 		.tiles article {
-			-moz-transition: -moz-transform 0.5s ease, opacity 0.5s ease;
-			-webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
-			-ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease;
-			transition: transform 0.5s ease, opacity 0.5s ease;
+			-moz-transition: -moz-transform 0.5s ease, opacity 0.5s ease, box-shadow 0.45s ease;
+			-webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease, box-shadow 0.45s ease;
+			-ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease, box-shadow 0.45s ease;
+			transition: transform 0.5s ease, opacity 0.5s ease, box-shadow 0.45s ease;
 			position: relative;
 			/* width: calc(40% - 2.5em);
 			margin: 5em 0 0 5em; */
 			width: calc(50% - 1.25em);
 			margin: 1.25em 0 0 1.25em;
+			border-radius: 1.25rem;
+			overflow: hidden; /* ensure children respect rounded corners */
+			box-shadow: 0 0.75rem 2rem -0.65rem rgba(0,0,0,0.45), 0 0 0 1px rgba(255,255,255,0.03) inset;
+			background: #111; /* subtle base so shadow feels grounded */
+		}
+
+		.tiles article:hover {
+			box-shadow: 0 1rem 2.4rem -0.55rem rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.05) inset;
+			transform: translateY(-4px);
 		}
 
 			.tiles article > .image {
@@ -2596,7 +2605,7 @@ input, select, textarea {
 				position: relative;
 				display: block;
 				width: 100%;
-				border-radius: 4px;
+				border-radius: 0; /* parent now handles rounded corners */
 				overflow: hidden;
 			}
 
@@ -2646,7 +2655,7 @@ input, select, textarea {
 					z-index: 2;
 				}
 
-			.tiles article > a {
+				.tiles article > a {
 				display: -moz-flex;
 				display: -webkit-flex;
 				display: -ms-flex;
@@ -2673,7 +2682,7 @@ input, select, textarea {
 				width: 100%;
 				height: 100%;
 				padding: 1em;
-				border-radius: 4px;
+				border-radius: 0; /* inherit rounded container */
 				border-bottom: 0;
 				color: #ffffff;
 				text-align: center;
