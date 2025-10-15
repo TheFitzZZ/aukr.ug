@@ -3362,4 +3362,22 @@ input, select, textarea {
 @media (prefers-reduced-motion:reduce){.event-banner:after{animation:none;display:none}.event-banner__icon{animation:none}}
 @media screen and (max-width:480px){.event-banner{flex-direction:row;padding:.75rem .85rem}.event-banner__text{font-size:.9rem}.event-banner__icon{font-size:1.25rem}}
 
+/* === Deutschlandfunk Audio Reportage Feature (custom) === */
+.audio-reportage-wrapper { margin-top: 3rem; }
+.audio-reportage { position:relative; background:linear-gradient(135deg,#222,#3a3a3a); color:#fff; padding:2.75rem 2rem 2.5rem; border-radius:1.25rem; overflow:hidden; box-shadow:0 0.75rem 2rem -0.5rem rgba(0,0,0,0.5); }
+.audio-reportage:before, .audio-reportage:after { content:""; position:absolute; width:380px; height:380px; background:radial-gradient(circle at center, rgba(242,132,158,0.35), rgba(242,132,158,0) 70%); top:-140px; right:-140px; opacity:.7; pointer-events:none; }
+.audio-reportage:after { top:auto; bottom:-160px; left:-160px; right:auto; background:radial-gradient(circle at center, rgba(255,255,255,0.08), rgba(255,255,255,0) 70%); }
+.audio-reportage h2 { color:#f2849e; margin:0 0 .5rem; letter-spacing:.25em; }
+.audio-reportage .ar-subtitle { font-weight:600; margin:-.25rem 0 1.1rem; font-size:1.05em; letter-spacing:.02em; }
+.audio-reportage .ar-text { margin:0 0 1.75rem; max-width:60ch; } 
+.audio-reportage .button { background:#f2849e; border:none; color:#fff !important; border-bottom:none; font-weight:700; letter-spacing:.07em; }
+.audio-reportage .button:hover { background:#ff98b1; }
+.audio-reportage .ar-icon { position:absolute; top:1.2rem; right:1.4rem; font-size:2.75rem; color:#f2849e; opacity:.25; }
+@media screen and (max-width: 736px){
+	.audio-reportage { padding:2.25rem 1.5rem 2.25rem; }
+	.audio-reportage .ar-icon { font-size:2.2rem; top:1rem; right:1rem; }
+	.audio-reportage h2 { font-size:1em; }
+	.audio-reportage .ar-subtitle { font-size:0.9em; }
+}
+
 
