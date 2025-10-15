@@ -3380,4 +3380,8 @@ input, select, textarea {
 	.audio-reportage .ar-subtitle { font-size:0.9em; }
 }
 
+/* Icon button refinement for reportage */
+.button.with-icon { display:inline-flex; align-items:center; gap:.55em; }
+.button.with-icon .icon { border:0; line-height:1; width:auto; height:auto; }
+
 
