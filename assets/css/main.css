@@ -3373,10 +3373,10 @@ input, select, textarea {
 .audio-reportage .button { background:#198aff; border:none; color:#fff !important; border-bottom:none; font-weight:700; letter-spacing:.07em; box-shadow:0 0 0 1px rgba(255,255,255,0.05),0 .45rem 1.1rem -0.4rem rgba(0,56,120,0.55); }
 .audio-reportage .button:hover { background:#4fa6ff; }
 .audio-reportage .button:active { background:#0f6dcc; }
-.audio-reportage .ar-icon { position:absolute; top:1.2rem; right:1.4rem; font-size:2.75rem; color:#198aff; opacity:.28; text-shadow:0 0 12px rgba(25,138,255,0.45); }
+.audio-reportage .ar-icon { position:absolute; bottom:1.4rem; right:1.4rem; font-size:2.75rem; color:#198aff; opacity:.28; text-shadow:0 0 12px rgba(25,138,255,0.45); }
 @media screen and (max-width: 736px){
 	.audio-reportage { padding:2.25rem 1.5rem 2.25rem; }
-	.audio-reportage .ar-icon { font-size:2.2rem; top:1rem; right:1rem; }
+	.audio-reportage .ar-icon { font-size:2.2rem; bottom:1.5rem; right:1rem; }
 	.audio-reportage h2 { font-size:1em; }
 	.audio-reportage .ar-subtitle { font-size:0.9em; }
 }
