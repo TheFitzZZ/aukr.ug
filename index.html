@@ -173,6 +173,54 @@
             from { opacity: 0; }
             to { opacity: 1; }
         }
+
+		/* Event / Promo Banner (Grünkohlessen) */
+		.event-banner {
+			--banner-accent:#d2b26e;
+			--banner-bg:#203820;
+			--banner-bg-alt:#2f4f2f;
+			animation: fadeIn 0.6s ease;
+			background:
+				linear-gradient(140deg,rgba(48,78,48,0.95),rgba(32,56,32,0.95)),
+				url('images/gruenkohl-texture.jpg');
+			background-size:cover;
+			background-position:center;
+			color: #ffffff;
+			padding: 0.5rem 0.1rem 0.1rem;
+			margin: 0 0 2.25rem 0;
+			border-radius: 14px;
+			position: relative;
+			overflow:hidden;
+			box-shadow: 0 6px 22px -6px rgba(0,0,0,0.45);
+		}
+		.event-banner:before {
+			content:"";
+			position:absolute; inset:0;
+			background:radial-gradient(circle at 78% 18%,rgba(255,255,255,0.15),transparent 60%);
+			pointer-events:none;
+		}
+		.event-banner__inner { display:flex; gap:1.75rem; align-items:stretch; justify-content:space-between; flex-wrap:wrap; }
+		.event-banner__content { flex:1 1 340px; min-width:260px; }
+		.event-banner__media { flex:0 0 220px; display:flex; align-items:center; justify-content:center; }
+		.event-banner__media img { max-width:200px; width:100%; height:auto; border-radius:10px; box-shadow:0 4px 12px -4px rgba(0,0,0,0.4); backdrop-filter:blur(2px); }
+		.event-eyebrow { letter-spacing:.12em; font-size:1.5rem; font-weight:600; text-transform:uppercase; color:var(--banner-accent); display:inline-block; margin-bottom:.35rem; }
+		.event-title { font-family:inherit; font-size:1.45rem; line-height:1.15; margin:0 0 .45rem; font-weight:700; }
+		.event-meta { font-size:.9rem; margin:0 0 .9rem; display:flex; flex-wrap:wrap; gap:.85rem; justify-content:center;}
+		.event-meta span { background:rgba(255,255,255,0.09); padding:.45rem .65rem; border-radius:6px; display:inline-flex; align-items:center; gap:.4rem; font-weight:500; }
+		.event-meta span i { color:var(--banner-accent); }
+		.menu-list { list-style:none; padding:0; margin:0 0 1rem; columns:2; column-gap:1.25rem; font-size:.9rem; }
+		.menu-list li { break-inside:avoid; position:relative; padding-left:1.05rem; margin:0 0 .35rem; }
+		.menu-list li:before { content:"•"; position:absolute; left:0; color:var(--banner-accent); }
+		.event-cta { display:flex; flex-wrap:wrap; gap:.75rem; justify-content:center; }
+		.event-cta a, .event-cta button { appearance:none; border:0; cursor:pointer; border-radius:8px; font-weight:600; letter-spacing:.03em; font-size:.75rem; text-transform:uppercase; padding:.85rem 1.05rem; display:inline-flex; align-items:center; gap:.5rem; text-decoration:none; transition:.25s background, .25s transform; }
+		.event-cta a.primary { background:var(--banner-accent); color:#203820; }
+		.event-cta a.primary:hover { background:#e3c788; transform:translateY(-2px); }
+		.event-cta a.outline { background:rgba(255,255,255,0.08); color:#fff; }
+		.event-cta a.outline:hover { background:rgba(255,255,255,0.18); transform:translateY(-2px); }
+		.event-smallprint { font-size:.65rem; opacity:.75; margin-top:.65rem; line-height:1.3; }
+		.event-price { font-size:1.05rem; font-weight:600; color:var(--banner-accent); }
+		.event-banner a { color:inherit; }
+		
 		</style>
 	</head>
 	<body class="is-preload">
@@ -234,6 +282,27 @@
 				<!-- Main -->					<div id="main">
 						<!-- Oktoberfest-Banner -->
 						<div class="inner" style="margin-top: 20px;">
+							<!-- Grünkohlessen Promo Banner (Rich Version) -->
+							<section class="event-banner gruenkohl-banner" aria-label="Hinweis auf das Grünkohlessen" data-hide-after="2025-11-24">
+								<div class="event-banner__inner">
+									<div class="event-banner__content">
+										<span class="event-eyebrow">Saisonales Special</span>
+										<h2 class="event-title">Grünkohlessen 2025</h2>
+										<p class="event-meta">
+											<span><i class="fas fa-calendar-alt" aria-hidden="true"></i> 23.11.2025</span>
+											<span><i class="fas fa-clock" aria-hidden="true"></i> 12:00 Uhr</span>
+											<span class="event-price"><i class="fas fa-tag" aria-hidden="true"></i> 22€ p.P.</span>
+										</p>
+
+										<div class="event-cta" role="group" aria-label="Aktionen">
+											<a class="primary" href="gruenkohl.html" aria-label="Mehr Informationen zum Grünkohlessen anzeigen"><i class="fas fa-info-circle" aria-hidden="true"></i><span>Mehr Infos</span></a>
+											<a class="outline" href="tel:+491739009705" aria-label="Telefonisch reservieren"><i class="fas fa-phone" aria-hidden="true"></i><span>Reservieren</span></a>
+										</div>
+										<p class="event-smallprint">Frühzeitig reservieren — begrenzte Plätze. Änderungen vorbehalten.</p>
+									</div>
+
+								</div>
+							</section>
                             <header>
                                 <h1>Willkommen im Aukrug Borsfleth!</a></h1>
                                 <p><b>Schön, dass Sie da sind!</b> </br> Mit viel Herz und Engagement erwecken wir die traditionsreiche Gaststätte Aukrug zu neuem Leben – als lebendigen Treffpunkt für unser Dorf, als einladende Anlaufstelle für Gruppen, Vereine und Radfahrer sowie als idyllischen Ort für alle, die auf ihrer Tour eine Auszeit suchen.
