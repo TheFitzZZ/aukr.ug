@@ -204,19 +204,28 @@
 		}
 
 		.instagram-embed-container {
-			max-width: 540px;
+			max-width: 100%;
 			margin: 0 auto 2rem;
-			min-height: 400px;
+			min-height: 600px;
+			padding: 0 1rem;
 		}
 
 		.instagram-grid {
 			width: 100%;
-			max-width: 540px;
+			max-width: 100%;
 			margin: 0 auto;
 		}
 
 		.instagram-grid iframe {
 			border-radius: 8px;
+			min-height: 1000px;
+		}
+
+		@media screen and (max-width: 736px) {
+			.instagram-grid iframe {
+				height: 800px;
+				min-height: 800px;
+			}
 		}
 
 		.instagram-cta {
@@ -428,9 +437,9 @@ Nach einem Besitzerwechsel und umfassender Erneuerung öffnet der Aukrug nun wie
 					// Show the section
 					feedSection.style.display = 'block';
 					
-					// Create a simple grid of Instagram posts using iframe approach
+					// Create Instagram embed with scrolling enabled for better visibility
 					feedContainer.innerHTML = '<div class="instagram-grid">' +
-						'<iframe src="https://www.instagram.com/aukr.ug/embed" width="100%" height="600" frameborder="0" scrolling="no" allowtransparency="true" style="border:none; overflow:hidden; border-radius:3px; background:#fff; max-width:540px; margin:0 auto; display:block; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);"></iframe>' +
+						'<iframe src="https://www.instagram.com/aukr.ug/embed" width="100%" height="1000" frameborder="0" scrolling="yes" allowtransparency="true" style="border:none; overflow:auto; border-radius:8px; background:#fff; max-width:100%; margin:0 auto; display:block; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);"></iframe>' +
 						'</div>';
 					
 					console.log('Instagram iframe embed loaded');
