@@ -180,6 +180,51 @@
             to { opacity: 1; }
         }
 
+		/* Instagram Feed Section Styles */
+		.instagram-feed-wrapper {
+			margin-top: 3rem;
+			padding: 3rem 0;
+			text-align: center;
+			border-top: 2px solid rgba(255, 255, 255, 0.1);
+		}
+
+		.instagram-feed-wrapper header {
+			margin-bottom: 2rem;
+		}
+
+		.instagram-feed-wrapper h2 {
+			font-size: 2rem;
+			margin-bottom: 1rem;
+			color: #ffffff;
+		}
+
+		.instagram-feed-wrapper p {
+			font-size: 1.1rem;
+			color: rgba(255, 255, 255, 0.7);
+		}
+
+		.instagram-embed-container {
+			max-width: 540px;
+			margin: 0 auto 2rem;
+			min-height: 400px;
+		}
+
+		.instagram-cta {
+			margin-top: 2rem;
+		}
+
+		.instagram-cta .button i {
+			margin-right: 0.5rem;
+		}
+
+		@media screen and (max-width: 736px) {
+			.instagram-feed-wrapper {
+				padding: 2rem 0;
+			}
+			.instagram-feed-wrapper h2 {
+				font-size: 1.5rem;
+			}
+		}
 		
 		</style>
 	</head>
@@ -312,6 +357,22 @@ Nach einem Besitzerwechsel und umfassender Erneuerung öffnet der Aukrug nun wie
 								</article>
 							</section>
 
+							<!-- Instagram Feed Section -->
+							<section id="instagram-feed-section" class="instagram-feed-wrapper" style="display: none;">
+								<header>
+									<h2>Folgen Sie uns auf Instagram</h2>
+									<p>Bleiben Sie auf dem Laufenden mit unseren neuesten Gerichten, Events und Einblicken hinter die Kulissen!</p>
+								</header>
+								<div id="instagram-feed-container" class="instagram-embed-container">
+									<!-- Instagram feed will be loaded here after cookie consent -->
+								</div>
+								<div class="instagram-cta">
+									<a href="https://www.instagram.com/aukr.ug/" target="_blank" rel="noopener" class="button primary">
+										<i class="fab fa-instagram"></i> Besuchen Sie unser Instagram
+									</a>
+								</div>
+							</section>
+
 						</div>
 					</div>
 				<!-- Footer -->
@@ -331,6 +392,88 @@ Nach einem Besitzerwechsel und umfassender Erneuerung öffnet der Aukrug nun wie
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			
+			<!-- Instagram Feed Cookie Consent Handler -->
+			<script>
+				function loadInstagramFeed() {
+					var feedSection = document.getElementById('instagram-feed-section');
+					var feedContainer = document.getElementById('instagram-feed-container');
+					
+					if (!feedSection || !feedContainer) return;
+					
+					// Show the section
+					feedSection.style.display = 'block';
+					
+					// Load Instagram embed script
+					if (!window.instagramScriptLoaded) {
+						var script = document.createElement('script');
+						script.async = true;
+						script.src = 'https://www.instagram.com/embed.js';
+						document.body.appendChild(script);
+						window.instagramScriptLoaded = true;
+					}
+					
+					// Create Instagram embed
+					feedContainer.innerHTML = '<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/aukr.ug/" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"></blockquote>';
+					
+					// Process the embed if Instagram script is already loaded
+					if (window.instgrm) {
+						window.instgrm.Embeds.process();
+					}
+				}
+				
+				function checkCookieConsent() {
+					// Check for cookie consent - multiple methods
+					// Method 1: Check for cookie-manager.com specific cookies/localStorage
+					if (localStorage.getItem('cookie-consent-accepted') === 'true') {
+						loadInstagramFeed();
+						return;
+					}
+					
+					// Method 2: Check for common cookie consent cookies
+					var cookies = document.cookie.split(';');
+					for (var i = 0; i < cookies.length; i++) {
+						var cookie = cookies[i].trim();
+						// Look for common consent cookie patterns
+						if (cookie.indexOf('cookie-consent=') === 0 || 
+							cookie.indexOf('cookieconsent_status=') === 0 ||
+							cookie.indexOf('cm_cookie_') === 0) {
+							var value = cookie.split('=')[1];
+							if (value && (value === 'allow' || value === 'true' || value === '1' || value.indexOf('accepted') !== -1)) {
+								loadInstagramFeed();
+								return;
+							}
+						}
+					}
+					
+					// Method 3: Listen for custom events from cookie manager
+					window.addEventListener('cookie-consent-accepted', function() {
+						localStorage.setItem('cookie-consent-accepted', 'true');
+						loadInstagramFeed();
+					});
+				}
+				
+				// Check on page load
+				if (document.readyState === 'loading') {
+					document.addEventListener('DOMContentLoaded', checkCookieConsent);
+				} else {
+					checkCookieConsent();
+				}
+				
+				// Also check periodically in case consent is given after page load
+				var checkInterval = setInterval(function() {
+					if (document.getElementById('instagram-feed-section').style.display === 'block') {
+						clearInterval(checkInterval);
+					} else {
+						checkCookieConsent();
+					}
+				}, 1000);
+				
+				// Clear interval after 30 seconds to avoid infinite checking
+				setTimeout(function() {
+					clearInterval(checkInterval);
+				}, 30000);
+			</script>
 
 	</body>
 </html>
