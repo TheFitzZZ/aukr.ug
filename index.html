@@ -471,7 +471,25 @@ Nach einem Besitzerwechsel und umfassender Erneuerung öffnet der Aukrug nun wie
 						// Check if any cookie suggests consent
 						if (cookie.length > 0) {
 							var name = cookie.split('=')[0];
-							var value = cookie.split('=')[1];
+							var value = cookie.substring(cookie.indexOf('=') + 1);
+							
+							// Special handling for acm_status (cookie-manager.com)
+							if (name === 'acm_status') {
+								console.log('Found acm_status cookie, decoding...');
+								try {
+									var decoded = atob(value);
+									console.log('Decoded acm_status:', decoded);
+									var statusObj = JSON.parse(decoded);
+									if (statusObj.status === 'allow') {
+										console.log('Cookie consent accepted via acm_status');
+										localStorage.setItem('cookie-consent-accepted', 'true');
+										loadInstagramFeed();
+										return true;
+									}
+								} catch(e) {
+									console.error('Error decoding acm_status:', e);
+								}
+							}
 							
 							// Look for cookie manager patterns
 							if (name.indexOf('cm_') === 0 || 
