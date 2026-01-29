@@ -3371,6 +3371,42 @@ input, select, textarea {
 @media (prefers-reduced-motion:reduce){.event-banner:after{animation:none;display:none}.event-banner__icon{animation:none}}
 @media screen and (max-width:480px){.event-banner{flex-direction:row;padding:.75rem .85rem}.event-banner__text{font-size:.9rem}.event-banner__icon{font-size:1.25rem}}
 
+/* === Event Announcement (Hopfen, Malz...und jede Menge Wunder!) === */
+.event-announcement-wrapper { margin: 2rem 0; }
+.event-announcement { position:relative; display:flex; gap:2rem; align-items:flex-start; background:linear-gradient(135deg,#2a1c1f,#4a2b32 55%,#2b1a20); color:#fff; padding:2.25rem; border-radius:1.25rem; box-shadow:0 0.75rem 2rem -0.6rem rgba(60,18,30,.55); overflow:hidden; }
+.event-announcement:before { content:""; position:absolute; inset:-20% 55% auto -30%; height:260px; background:radial-gradient(circle, rgba(255,190,120,.3), rgba(255,190,120,0)); pointer-events:none; }
+.event-announcement__media { flex:0 0 240px; }
+.event-thumb { display:inline-flex; flex-direction:column; gap:.5rem; text-decoration:none; color:#fff; }
+.event-thumb img { width:100%; max-width:240px; height:auto; border-radius:.75rem; box-shadow:0 0.6rem 1.5rem -0.5rem rgba(0,0,0,.55); transition:transform .2s ease, box-shadow .2s ease; }
+.event-thumb:hover img,
+.event-thumb:focus-visible img { transform:scale(1.05); box-shadow:0 0.8rem 1.8rem -0.4rem rgba(0,0,0,.7); }
+.event-thumb__hint { font-size:.8rem; opacity:.85; letter-spacing:.02em; }
+.event-announcement__content h2 { margin:0 0 .5rem; color:#ffd47a; letter-spacing:.08em; }
+.event-announcement__date { font-weight:700; font-size:1.05em; margin:0 0 .4rem; }
+.event-announcement__note { margin:0 0 .4rem; }
+.event-announcement__cta { font-weight:600; margin:1rem 0 0; }
+.event-announcement__cta a { color:#ffd47a; text-decoration:underline; text-underline-offset:3px; }
+.event-announcement__cta a:hover,
+.event-announcement__cta a:focus-visible { color:#fff; text-decoration-thickness:2px; }
+
+.event-modal { position:fixed; inset:0; background:rgba(6,6,8,.9); display:flex; align-items:center; justify-content:center; padding:1.5rem; opacity:0; pointer-events:none; transition:opacity .2s ease; z-index:10000; }
+.event-modal:target { opacity:1; pointer-events:auto; }
+.event-modal__content { max-width:min(92vw, 980px); }
+.event-modal__content img { width:100%; height:auto; border-radius:.75rem; box-shadow:0 1.2rem 3rem -1rem rgba(0,0,0,.75); }
+.event-modal__close { position:absolute; top:1.2rem; right:1.5rem; font-size:2rem; color:#fff; text-decoration:none; }
+.event-modal__close:hover,
+.event-modal__close:focus-visible { color:#ffd47a; }
+
+@media screen and (max-width: 980px){
+	.event-announcement { align-items:center; }
+}
+
+@media screen and (max-width: 736px){
+	.event-announcement { flex-direction:column; padding:2rem 1.5rem; }
+	.event-announcement__media { width:100%; }
+	.event-thumb img { max-width:320px; }
+}
+
 /* === Deutschlandfunk Audio Reportage Feature (custom) === */
 .audio-reportage-wrapper { margin-top: 2rem; margin-bottom: 2rem;}
 .audio-reportage { position:relative; background:linear-gradient(135deg,#0f2640,#12375c 55%,#0c1e33); color:#fff; padding:2.75rem 2rem 2.5rem; border-radius:1.25rem; overflow:hidden; box-shadow:0 0.75rem 2rem -0.5rem rgba(0,40,90,0.55); }
