@@ -23,3 +23,26 @@ function showSlides(n) {
   }
   dots[slideIndex-1].className += " active";
 }
+
+const carousel = document.querySelector('.carousel-container');
+let touchStartX = 0;
+let touchEndX = 0;
+
+carousel.addEventListener('touchstart', e => {
+  touchStartX = e.changedTouches[0].screenX;
+});
+
+carousel.addEventListener('touchend', e => {
+  touchEndX = e.changedTouches[0].screenX;
+  handleSwipe();
+});
+
+function handleSwipe() {
+  if (touchEndX < touchStartX - 50) {
+    plusSlides(1);
+  }
+
+  if (touchEndX > touchStartX + 50) {
+    plusSlides(-1);
+  }
+}
