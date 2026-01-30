@@ -29,20 +29,27 @@ let touchStartX = 0;
 let touchEndX = 0;
 
 carousel.addEventListener('touchstart', e => {
-  touchStartX = e.changedTouches[0].screenX;
+  touchStartX = e.touches[0].clientX;
 });
 
-carousel.addEventListener('touchend', e => {
-  touchEndX = e.changedTouches[0].screenX;
+carousel.addEventListener('touchmove', e => {
+    touchEndX = e.touches[0].clientX;
+});
+
+carousel.addEventListener('touchend', () => {
   handleSwipe();
 });
 
 function handleSwipe() {
-  if (touchEndX < touchStartX - 50) {
+  const swipeThreshold = 50; // Minimum distance for a swipe
+  if (touchStartX - touchEndX > swipeThreshold) {
+    // Swiped left
     plusSlides(1);
-  }
-
-  if (touchEndX > touchStartX + 50) {
+  } else if (touchEndX - touchStartX > swipeThreshold) {
+    // Swiped right
     plusSlides(-1);
   }
+  // Reset values
+  touchStartX = 0;
+  touchEndX = 0;
 }
