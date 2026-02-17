@@ -12,6 +12,7 @@
         <link rel="icon" href="images/aukrug-logo-only-small-128.png" type="image/png" />
         <!-- Original Site Styles -->
         <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/carousel.css" />
         <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
         <script async type="text/javascript" src="//www.cookie-manager.com/a/b7/792462abe6a4adb6cc09509f986e6ebc.js"></script>
         <!-- Google tag (gtag.js) -->
@@ -221,6 +222,28 @@
 </div>
 <!-- PDF menu embed END -->
 
+                            <div style="margin-top: 2rem;">
+                                <h2>Einblicke in unsere Räumlichkeiten</h2>
+                                <div class="carousel-container">
+                                    <div class="carousel-slide">
+                                        <img src="carussel/ofenkartoffel.jpg" alt="Ofenkartoffel mit Beilage">
+                                        <img src="carussel/sandwich-fixed.png" alt="Club Sandwich">
+                                        <img src="carussel/suppe.jpg" alt="Suppe">
+                                        <img src="carussel/toast.jpg" alt="Toast Hawaii">
+                                    </div>
+
+                                    <a class="carousel-prev" onclick="plusSlides(-1)">&#10094;</a>
+                                    <a class="carousel-next" onclick="plusSlides(1)">&#10095;</a>
+                                </div>
+                                <br>
+                                <div class="dots-container" style="text-align:center">
+                                    <span class="dot" onclick="currentSlide(1)"></span>
+                                    <span class="dot" onclick="currentSlide(2)"></span>
+                                    <span class="dot" onclick="currentSlide(3)"></span>
+                                    <span class="dot" onclick="currentSlide(4)"></span>
+                                </div>
+                            </div>
+
 
 
                         </div>
@@ -248,6 +271,8 @@
             <script src="assets/js/breakpoints.min.js"></script>
             <script src="assets/js/util.js"></script>
             <script src="assets/js/main.js"></script>
+            <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
+            <script src="assets/js/carousel.js"></script>
 
     </body>
 </html>
