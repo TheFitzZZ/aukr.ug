@@ -3397,6 +3397,22 @@ input, select, textarea {
 .event-modal__close:hover,
 .event-modal__close:focus-visible { color:#ffd47a; }
 
+/* Genuss Michel 2026 — video event modal additions */
+.event-thumb__poster { position:relative; display:block; max-width:240px; }
+.event-thumb__poster img { display:block; margin:0; }
+.event-thumb__play { position:absolute; top:50%; left:50%; width:64px; height:64px; transform:translate(-50%,-50%); border-radius:50%; background:rgba(0,0,0,0.55); color:#fff; display:flex; align-items:center; justify-content:center; font-size:1.6rem; pointer-events:none; transition:background .2s ease, transform .2s ease, color .2s ease; }
+.event-thumb--video:hover .event-thumb__play,
+.event-thumb--video:focus-visible .event-thumb__play { background:rgba(122,200,255,0.92); color:#0e2238; transform:translate(-50%,-50%) scale(1.08); }
+.event-modal__content video { width:100%; height:auto; max-height:85vh; border-radius:.75rem; box-shadow:0 1.2rem 3rem -1rem rgba(0,0,0,.75); background:#000; display:block; }
+
+/* Genuss Michel 2026 — maritime-blue palette override */
+.event-announcement--genuss { background:linear-gradient(135deg,#0e2238,#1a4a78 55%,#0e2238); box-shadow:0 0.75rem 2rem -0.6rem rgba(14,34,56,.55); }
+.event-announcement--genuss:before { background:radial-gradient(circle, rgba(122,200,255,.32), rgba(122,200,255,0)); }
+.event-announcement--genuss .event-announcement__content h2 { color:#7ac8ff; }
+.event-announcement--genuss .event-announcement__cta a { color:#7ac8ff; }
+.event-announcement--genuss .event-announcement__cta a:hover,
+.event-announcement--genuss .event-announcement__cta a:focus-visible { color:#fff; }
+
 @media screen and (max-width: 980px){
 	.event-announcement { align-items:center; }
 }
