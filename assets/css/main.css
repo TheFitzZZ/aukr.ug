@@ -3371,7 +3371,7 @@ input, select, textarea {
 @media (prefers-reduced-motion:reduce){.event-banner:after{animation:none;display:none}.event-banner__icon{animation:none}}
 @media screen and (max-width:480px){.event-banner{flex-direction:row;padding:.75rem .85rem}.event-banner__text{font-size:.9rem}.event-banner__icon{font-size:1.25rem}}
 
-/* === Event Announcement (Hopfen, Malz...und jede Menge Wunder!) === */
+/* === Event Announcement === */
 .event-announcement-wrapper { margin: 2rem 0; }
 .event-announcement { position:relative; display:flex; gap:2rem; align-items:flex-start; background:linear-gradient(135deg,#2a1c1f,#4a2b32 55%,#2b1a20); color:#fff; padding:2.25rem; border-radius:1.25rem; box-shadow:0 0.75rem 2rem -0.6rem rgba(60,18,30,.55); overflow:hidden; }
 .event-announcement:before { content:""; position:absolute; inset:-20% 55% auto -30%; height:260px; background:radial-gradient(circle, rgba(255,190,120,.3), rgba(255,190,120,0)); pointer-events:none; }
@@ -3445,5 +3445,4 @@ input, select, textarea {
 /* Icon button refinement for reportage */
 .button.with-icon { display:inline-flex; align-items:center; gap:.55em; }
 .button.with-icon .icon { border:0; line-height:1; width:auto; height:auto; }
-
 
