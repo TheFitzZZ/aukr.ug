@@ -3358,6 +3358,7 @@ input, select, textarea {
 
 	
 /* Event Banner (Blaulicht) */
+.event-banner-wrapper{max-width:70rem;margin:0 auto;padding:0 1rem}
 .event-banner {position:relative;display:flex;gap:.85rem;align-items:center;justify-content:center;text-align:center;padding:.9rem 1.15rem;margin:1rem 0 1.75rem 0;border:2px solid #103d72;border-radius:.65rem;background:linear-gradient(135deg,#061a2e 0%,#0d3666 55%,#0a2442 100%);color:#fff;font-weight:600;line-height:1.25;box-shadow:0 0 0 1px rgba(255,255,255,.05) inset,0 4px 10px -2px rgba(0,0,0,.55),0 0 18px -2px rgba(0,92,255,.35);overflow:hidden}
 .event-banner:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 18% 15%,rgba(255,255,255,.18),transparent 55%),radial-gradient(circle at 85% 80%,rgba(255,255,255,.08),transparent 70%);mix-blend-mode:overlay;pointer-events:none}
 .event-banner:after{content:"";position:absolute;top:-10%;bottom:-10%;width:40%;left:-50%;background:linear-gradient(100deg,rgba(255,255,255,0) 0%,rgba(120,180,255,.65) 45%,rgba(255,255,255,.9) 50%,rgba(120,180,255,.65) 55%,rgba(255,255,255,0) 100%);filter:blur(2px);transform:skewX(-15deg);animation:sirenSweep 5.5s cubic-bezier(.65,.05,.36,1) infinite;pointer-events:none;mix-blend-mode:screen}
