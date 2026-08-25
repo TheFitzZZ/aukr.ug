@@ -3393,7 +3393,7 @@ input, select, textarea {
 .event-modal { position:fixed; inset:0; background:rgba(6,6,8,.9); display:flex; align-items:center; justify-content:center; padding:1.5rem; opacity:0; pointer-events:none; transition:opacity .2s ease; z-index:10000; }
 .event-modal:target { opacity:1; pointer-events:auto; }
 .event-modal__content { max-width:min(92vw, 980px); }
-.event-modal__content img { width:100%; height:auto; border-radius:.75rem; box-shadow:0 1.2rem 3rem -1rem rgba(0,0,0,.75); }
+.event-modal__content img { display:block; width:auto; max-width:100%; height:auto; max-height:90vh; margin:0 auto; border-radius:.75rem; box-shadow:0 1.2rem 3rem -1rem rgba(0,0,0,.75); }
 .event-modal__close { position:absolute; top:1.2rem; right:1.5rem; font-size:2rem; color:#fff; text-decoration:none; }
 .event-modal__close:hover,
 .event-modal__close:focus-visible { color:#ffd47a; }
