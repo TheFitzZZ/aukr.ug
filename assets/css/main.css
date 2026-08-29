@@ -3467,6 +3467,15 @@ input, select, textarea {
 	.event-announcement__media { width:100%; }
 	.event-thumb img { max-width:320px; }
 	.event-thumb__image { width:320px; }
+	.event-carousel .event-announcement { gap:1rem; align-items:center; padding:1.25rem 1rem 4.5rem; }
+	.event-carousel .event-announcement__media { width:auto; }
+	.event-carousel .event-thumb__image { width:clamp(180px, 55vw, 220px); }
+	.event-carousel .event-thumb__hint { font-size:.7rem; text-align:center; }
+	.event-carousel .event-announcement__content h2 { margin-bottom:.35rem; font-size:1.15rem; line-height:1.25; }
+	.event-carousel .event-announcement__content p { margin-bottom:.75rem; line-height:1.5; }
+	.event-carousel .event-announcement__date,
+	.event-carousel .event-announcement__note { margin-bottom:.35rem; }
+	.event-carousel .event-announcement__cta { margin-top:.35rem; margin-bottom:0; }
 	.event-carousel__controls { right:.75rem; bottom:.75rem; gap:.45rem; }
 }
 
