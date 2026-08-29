@@ -3480,8 +3480,24 @@ input, select, textarea {
 }
 
 @media screen and (max-width: 480px){
-	.event-carousel__controls { gap:.3rem; }
-	.event-carousel__autoplay { padding:.65rem .8rem; }
+	.event-carousel .event-announcement { gap:.65rem; padding:.85rem .75rem 3.1rem; }
+	.event-carousel .event-thumb__image { width:clamp(125px, 38vw, 160px); }
+	.event-carousel .event-thumb__hint,
+	.event-carousel .event-announcement__promo { display:none; }
+	.event-carousel .event-announcement__content { width:100%; font-size:.88rem; }
+	.event-carousel .event-announcement__content h2 { margin-bottom:.25rem; font-size:1rem; }
+	.event-carousel .event-announcement__content p { margin-bottom:.45rem; line-height:1.35; }
+	.event-carousel .event-announcement__date,
+	.event-carousel .event-announcement__note { margin-bottom:.2rem; }
+	.event-carousel .event-announcement__cta { margin-top:.2rem; }
+	.event-carousel__controls { right:.5rem; bottom:.5rem; gap:.2rem; padding:.2rem; }
+	.event-carousel__autoplay,
+	.event-carousel__arrow { min-height:1.9rem; }
+	.event-carousel__autoplay { padding:.45rem .6rem; font-size:.65rem; }
+	.event-carousel__arrow { width:1.9rem; font-size:.9rem; }
+	.event-carousel__dots { gap:.3rem; padding:.3rem .2rem; }
+	.event-carousel__dot { width:.5rem; height:.5rem; }
+	.event-carousel__status { min-width:2.4rem; font-size:.65rem; }
 }
 
 @media (prefers-reduced-motion:reduce){
