@@ -3434,6 +3434,16 @@ input, select, textarea {
 .event-announcement--zweik .event-announcement__cta a:hover,
 .event-announcement--zweik .event-announcement__cta a:focus-visible { color:#fff; }
 
+/* Oktoberfest event palette and landscape flyer */
+.event-announcement--oktoberfest { background:linear-gradient(135deg,#07385f,#0b5f88 58%,#07385f); box-shadow:0 .75rem 2rem -.6rem rgba(3,42,73,.65); }
+.event-announcement--oktoberfest:before { background:radial-gradient(circle, rgba(242,163,32,.4), rgba(242,163,32,0)); }
+.event-announcement--oktoberfest .event-announcement__media { flex-basis:300px; }
+.event-announcement--oktoberfest .event-thumb__image { width:300px; aspect-ratio:1191 / 940; background:#fff; }
+.event-announcement--oktoberfest .event-announcement__content h2,
+.event-announcement--oktoberfest .event-announcement__cta a { color:#ffd052; }
+.event-announcement--oktoberfest .event-announcement__cta a:hover,
+.event-announcement--oktoberfest .event-announcement__cta a:focus-visible { color:#fff; }
+
 .event-modal { position:fixed; inset:0; background:rgba(6,6,8,.9); display:flex; align-items:center; justify-content:center; padding:1.5rem; opacity:0; pointer-events:none; transition:opacity .2s ease; z-index:10000; }
 .event-modal:target { opacity:1; pointer-events:auto; }
 .event-modal__content { max-width:min(92vw, 980px); }
@@ -3468,7 +3478,7 @@ input, select, textarea {
 	.event-thumb img { max-width:320px; }
 	.event-thumb__image { width:320px; }
 	.event-carousel .event-announcement { gap:1rem; align-items:center; padding:1.25rem 1rem 4.5rem; }
-	.event-carousel .event-announcement__media { width:auto; }
+	.event-carousel .event-announcement__media { flex-basis:auto; width:auto; }
 	.event-carousel .event-thumb__image { width:clamp(180px, 55vw, 220px); }
 	.event-carousel .event-thumb__hint { font-size:.7rem; text-align:center; }
 	.event-carousel .event-announcement__content h2 { margin-bottom:.35rem; font-size:1.15rem; line-height:1.25; }
