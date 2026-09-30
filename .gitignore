@@ -13,3 +13,9 @@ Thumbs.db
 tmp/
 temp/
 .venv/
+
+# Node / app workspaces
+node_modules/
+_site/
+*.tsbuildinfo
+.env*.local

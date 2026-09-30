@@ -1,0 +1,78 @@
+# Sends a manual push notification to app users (Actions → "Send app notification" → Run workflow).
+name: Send app notification
+
+on:
+  workflow_dispatch:
+    inputs:
+      title:
+        description: Titel (max. 80 Zeichen)
+        required: true
+        type: string
+      body:
+        description: Text (max. 180 Zeichen)
+        required: true
+        type: string
+      topic:
+        description: Thema, das Nutzer abonniert haben
+        required: true
+        default: general
+        type: choice
+        options: [general, events, notices, hours, menu]
+      route:
+        description: 'Ziel in der App, z. B. "/", "/menu", "/hours" oder "/events/<id>"'
+        required: true
+        default: /
+        type: string
+      target:
+        description: Empfänger
+        required: true
+        default: development
+        type: choice
+        options: [development, production]
+      dry_run:
+        description: Nur von Firebase prüfen lassen, nicht senden
+        required: true
+        default: true
+        type: boolean
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - name: Install content tooling
+        run: npm ci --workspace tools --workspace packages/content --ignore-scripts
+      - name: Authenticate to Google Cloud (Workload Identity Federation)
+        if: vars.GCP_WORKLOAD_IDENTITY_PROVIDER != ''
+        uses: google-github-actions/auth@v3
+        with:
+          workload_identity_provider: ${{ vars.GCP_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ vars.GCP_SERVICE_ACCOUNT }}
+      - name: Authenticate to Google Cloud (service account key)
+        if: vars.GCP_WORKLOAD_IDENTITY_PROVIDER == ''
+        uses: google-github-actions/auth@v3
+        with:
+          credentials_json: ${{ secrets.FCM_SERVICE_ACCOUNT_JSON }}
+      - name: Send notification
+        env:
+          FCM_PROJECT_ID: ${{ vars.FCM_PROJECT_ID }}
+          TITLE: ${{ inputs.title }}
+          BODY: ${{ inputs.body }}
+          TOPIC: ${{ inputs.topic }}
+          ROUTE: ${{ inputs.route }}
+          TARGET: ${{ inputs.target }}
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          args=(send --topic "$TOPIC" --title "$TITLE" --body "$BODY" --route "$ROUTE" --target "$TARGET")
+          if [ "$DRY_RUN" = "true" ]; then args+=(--dry-run); fi
+          npm run notify --workspace tools -- "${args[@]}"

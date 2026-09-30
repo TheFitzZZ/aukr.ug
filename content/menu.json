@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "version": "2026-09",
+  "title": "Unsere Karte",
+  "intro": "Regional. Ehrlich. Lecker. Beliebte Klassiker und regionale Spezialitäten – ergänzt um saisonale Gerichte und besondere Highlights.",
+  "footnote": "Reservierung: info@aukr.ug",
+  "categories": [
+    {
+      "id": "zum-start",
+      "title": "Zum Start",
+      "subtitle": "Kleine Köstlichkeiten für den ersten Appetit",
+      "items": [
+        { "name": "Tomatensuppe", "description": "mit Basilikumschaum", "price": 6 },
+        { "name": "Kürbissuppe", "description": "mit Balsamico und Garnelenspieß", "price": 9 },
+        { "name": "Matjestatar", "description": "auf hausgemachtem Vollkornbrot, mit Salat", "price": 11 }
+      ]
+    },
+    {
+      "id": "gold-aus-der-erde",
+      "title": "Gold aus der Erde",
+      "subtitle": "Ofenkartoffel in köstlichen Variationen",
+      "items": [
+        { "name": "Klassik", "description": "mit Sour Cream & Salatbeilage", "price": 10 },
+        { "name": "Mexico", "description": "mit Chili con Carne, Sour Cream & Nachos, überbacken mit Käse", "price": 15 }
+      ]
+    },
+    {
+      "id": "klassiker",
+      "title": "Unsere Klassiker",
+      "subtitle": "Herzhaft und zeitlos gut",
+      "items": [
+        { "name": "Currywurst", "description": "mit Pommes", "price": 9 },
+        {
+          "name": "Schnitzel „Wiener Art“",
+          "description": "mit Pommes & Beilagensalat",
+          "price": 16,
+          "options": [
+            { "label": "Champignonsauce", "surcharge": 3 },
+            { "label": "wahlweise mit Bratkartoffeln", "surcharge": 3 }
+          ]
+        },
+        {
+          "name": "Schleusenschnitzel",
+          "description": "mit Zwiebeln, Tomaten & Käse überbacken, mit Pommes & Beilagensalat",
+          "price": 19,
+          "options": [{ "label": "wahlweise mit Bratkartoffeln", "surcharge": 3 }]
+        },
+        { "name": "Sauerfleisch", "description": "mit Bratkartoffeln, Remoulade", "price": 17 },
+        { "name": "Rundstück warm", "description": "auf Toast mit würziger Champignonsauce", "price": 13 },
+        {
+          "name": "Sandwich „Aukrug“",
+          "description": "mit Spiegelei, Bacon, Salat, Remoulade",
+          "variants": [
+            { "label": "mit Matjes", "price": 17 },
+            { "label": "mit Schnitzel", "price": 18 }
+          ]
+        },
+        { "name": "Backfischstücke", "description": "mit Pommes und Remoulade", "price": 12 }
+      ]
+    },
+    {
+      "id": "pasta",
+      "title": "Pasta",
+      "subtitle": "Dolce Vita am Deich",
+      "items": [{ "name": "Garnelen", "description": "in Tomatensauce", "price": 17 }]
+    },
+    {
+      "id": "kleine-gaeste",
+      "title": "Kleine Gäste",
+      "subtitle": "Lieblingsessen für Abenteurer",
+      "items": [
+        { "name": "Pommespiraten", "description": "Hähnchen-Nuggets mit Pommes", "price": 8 },
+        { "name": "Küstenschnupperer", "description": "Fischstäbchen mit Pommes", "price": 9 },
+        { "name": "Nudelhelden", "description": "Kleine Portion Pasta mit Tomatensauce oder Butter", "price": 8 }
+      ]
+    },
+    {
+      "id": "flammkuchen",
+      "title": "Flammkuchen",
+      "subtitle": "Frisch & knusprig aus dem Ofen",
+      "items": [
+        { "name": "Elsässer Art", "description": "Flammkuchencreme · Speck · Zwiebeln", "price": 11 },
+        {
+          "name": "Aukrug Spezial",
+          "description": "Flammkuchencreme · Kochschinken · Champignons · Zwiebeln · Cheddar",
+          "price": 12
+        },
+        {
+          "name": "Pulled Pork BBQ",
+          "description": "Flammkuchencreme · Pulled Pork · rote Zwiebeln · Cheddar · BBQ-Sauce",
+          "price": 14
+        },
+        {
+          "name": "Ziegenkäse & Birne",
+          "description": "Flammkuchencreme · Birne · Ziegenkäse · Walnüsse · Honig",
+          "price": 14
+        },
+        {
+          "name": "Vegetarisch",
+          "description": "Flammkuchencreme · Champignons · Paprika · Zwiebeln · Cheddar · Kräuter",
+          "price": 12,
+          "tags": ["vegetarian"]
+        },
+        { "name": "Apfel-Zimt", "description": "Flammkuchencreme · Apfel · Zimt · Zucker · Honig", "price": 9 }
+      ]
+    },
+    {
+      "id": "zum-dahinschmelzen",
+      "title": "Zum Dahinschmelzen",
+      "items": [
+        {
+          "name": "Pack Eis",
+          "price": 3,
+          "choices": [
+            "Quark-Himbeer",
+            "Buttermilch-Limette",
+            "Haselnuss",
+            "Vanille",
+            "Zitrone-Minze",
+            "Joghurt Blaubeer",
+            "Schokolade"
+          ]
+        }
+      ]
+    }
+  ]
+}

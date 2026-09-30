@@ -224,6 +224,7 @@
 						</ul>					</nav>
 
 				<!-- Opening Times Section -->
+				<!-- content:opening-hours · generiert aus content/opening-hours.json – dort ändern und "npm run content:render" ausführen -->
 				<div class="opening-times-header">
 					<h2 class="flyer-title">Unsere Öffnungszeiten:</h2>
 					<div class="opening-hours">
@@ -240,17 +241,23 @@
 							<span class="time">16:00–21:00</span>
 						</div>
 					</div>
-					<div class="flyer-cta">Mo-Do geschlossen | K&uuml;che bis 21 Uhr | <a href="kontakt.html" class="flyer-cta__link">Feiern &amp; Veranstaltungen auch au&szlig;erhalb der &Ouml;ffnungszeiten</a></div>
+					<div class="flyer-cta">Mo-Do geschlossen | Küche bis 21 Uhr | <a href="kontakt.html" class="flyer-cta__link">Feiern &amp; Veranstaltungen auch außerhalb der Öffnungszeiten</a></div>
 				</div>
-				<div class="holiday-info" style="display:none;text-align:center;padding:8px 12px;background-color:#3a2a1a;color:#ffd9a8;font-size:0.85rem;border-bottom:1px solid rgba(255,255,255,0.1);"><strong>Hinweis:</strong> Sonntag, 14. Juni: geschlossene Gesellschaft bis 17 Uhr</div>
+				<!-- /content:opening-hours -->
+				<!-- content:notices · generiert aus content/notices.json – dort ändern und "npm run content:render" ausführen -->
+				<!-- /content:notices -->
 
 				<!-- Main -->
 					<div id="main">
 						<!-- Veranstaltungskalender und aktuelle Hinweise -->
 						<div class="inner" style="margin-top: 20px;">
 							<h1>Unser Veranstaltungskalender</h1>
-							<p><strong>Neu: Schnitzelbuffet am Samstag, 10. Oktober 2026 ab 18:30 Uhr.</strong> Verschiedene Schnitzelvariationen, Beilagen und frische Salate für 24,00 € pro Person. Reservierung: <a href="mailto:info@aukr.ug?subject=Reservierung%20Schnitzelbuffet%2010.10.2026">info@aukr.ug</a>. <a href="index.html#event-slide-schnitzelbuffet">Plakat auf der Startseite ansehen →</a></p>
+							<!-- content:event-teasers · generiert aus content/events.json – dort ändern und "npm run content:render" ausführen -->
+							<p data-visible-until="2026-10-10"><strong>Neu: Schnitzelbuffet am Samstag, 10. Oktober 2026 ab 18:30 Uhr.</strong> Verschiedene Schnitzelvariationen, Beilagen und frische Salate für 24,00 € pro Person. <a href="mailto:info@aukr.ug?subject=Reservierung%20Schnitzelbuffet%2010.10.2026">Jetzt per E-Mail reservieren →</a> <a href="index.html#event-slide-schnitzelbuffet">Plakat auf der Startseite ansehen →</a></p>
+							<!-- /content:event-teasers -->
+					<!-- content:calendar-image · generiert aus content/events.json – dort ändern und "npm run content:render" ausführen -->
 					<img src="assets/kalender2026.jpg?v=20260825-3" alt="Veranstaltungskalender 2026" class="calendar-image" />
+					<!-- /content:calendar-image -->
 							<p>Sie planen Ihre eigene Veranstaltung? Feiern und geschlossene Gesellschaften sind bei uns auch außerhalb der Öffnungszeiten möglich – auf Wunsch auch von Montag bis Donnerstag. <a href="kontakt.html">Jetzt Termin anfragen &rarr;</a></p>
 						</div>
 					</div>
@@ -273,6 +280,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/content-visibility.js"></script>
 
 	</body>
 </html>

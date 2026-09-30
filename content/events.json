@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "calendar": {
+    "title": "Veranstaltungskalender 2026",
+    "image": "assets/kalender2026.jpg?v=20260825-3",
+    "alt": "Veranstaltungskalender 2026"
+  },
+  "events": [
+    {
+      "id": "schnitzelbuffet",
+      "kind": "event",
+      "title": "Schnitzelbuffet im Aukrug",
+      "shortTitle": "Schnitzelbuffet",
+      "tagline": "Gute Zeit. Gutes Essen.",
+      "start": "2026-10-10T18:30",
+      "highlights": ["Ab 18:30 Uhr · 24,00 € pro Person"],
+      "description": [
+        "Freut euch auf klassische Schnitzel, Jägerschnitzel, Schnitzel mit Rahmsauce und weitere Variationen – dazu verschiedene Beilagen und frische Salate."
+      ],
+      "closing": "Wir freuen uns auf euch!",
+      "summary": "Verschiedene Schnitzelvariationen, Beilagen und frische Salate für 24,00 € pro Person.",
+      "announce": true,
+      "actions": [
+        {
+          "label": "Jetzt per E-Mail reservieren",
+          "url": "mailto:info@aukr.ug?subject=Reservierung%20Schnitzelbuffet%2010.10.2026"
+        }
+      ],
+      "poster": {
+        "src": "assets/schnitzelbuffet-2026-10-10.jpeg",
+        "alt": "Schnitzelbuffet im Aukrug am Samstag, 10. Oktober 2026, ab 18:30 Uhr – 24 Euro pro Person",
+        "zoomAlt": "Plakat: Schnitzelbuffet am 10. Oktober 2026 ab 18:30 Uhr, 24 Euro pro Person; Reservierung unter info@aukr.ug"
+      }
+    },
+    {
+      "id": "federweisser",
+      "kind": "offer",
+      "title": "Federweißer & Zwiebelkuchen",
+      "shortTitle": "Federweißer und Zwiebelkuchen",
+      "tagline": "Der frische Genuss des Herbstes!",
+      "highlights": ["Federweißer · 0,2 Liter · 4,00 €", "Zwiebelkuchen · Stück · 6,00 €"],
+      "description": ["Herbstzeit im Aukrug: Gut trinken, gut essen – schön bei uns!"],
+      "summary": "Federweißer (0,2 Liter) für 4,00 € und Zwiebelkuchen für 6,00 € pro Stück.",
+      "poster": {
+        "src": "assets/federweisser-zwiebelkuchen-2026.jpeg",
+        "alt": "Federweißer und Zwiebelkuchen im Aukrug: 0,2 Liter Federweißer für 4,00 Euro, ein Stück Zwiebelkuchen für 6,00 Euro",
+        "zoomAlt": "Plakat: Federweißer, 0,2 Liter für 4,00 Euro, und Zwiebelkuchen, ein Stück für 6,00 Euro, im Aukrug"
+      }
+    },
+    {
+      "id": "comedy-magic-dinner",
+      "kind": "event",
+      "title": "Die Comedy Magic Dinner Show!",
+      "shortTitle": "Die Comedy Magic Dinner Show",
+      "tagline": "Das Weihnachtsspezial!",
+      "start": "2027-01-16T19:00",
+      "highlights": ["19:00 / Einlass 18:30 Uhr"],
+      "description": [
+        "Diese Show mit Zauberkünstler und Entertainer Kevin Köneke liefert Comedy Magic pur: klare Gags, spontane Momente, starke Illusionen und viel Interaktion. Locker und voller Überraschungen. Eine Show, die Spaß macht und immer wieder zum Staunen bringt.",
+        "Ein Abend mit Humor, Magie, richtig guter Unterhaltung und einem Mehrgänge Menü."
+      ],
+      "closing": "Lachen. Staunen. Mitmachen.",
+      "summary": "Comedy, Magie und ein Mehrgänge-Menü mit Kevin Köneke.",
+      "actions": [
+        {
+          "label": "Tickets sichern",
+          "url": "https://www.eventim-light.com/de/a/6929836759181a05a09037a4/e/6a7b522b956ff16800be8179"
+        }
+      ],
+      "poster": {
+        "src": "assets/comedyshow2701.jpeg",
+        "alt": "Die Comedy Magic Dinner Show mit Kevin Köneke – Showplakat"
+      }
+    }
+  ]
+}

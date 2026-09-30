@@ -1,0 +1,471 @@
+{
+  "schemaVersion": 1,
+  "site": {
+    "schemaVersion": 1,
+    "name": "Aukrug Borsfleth",
+    "shortName": "Aukrug",
+    "tagline": "Restaurant und Biergarten",
+    "owner": "Torsten Gerund",
+    "address": {
+      "street": "Dorfstraße 2",
+      "postalCode": "25376",
+      "city": "Borsfleth"
+    },
+    "coordinates": {
+      "latitude": 53.827081,
+      "longitude": 9.42804
+    },
+    "phone": {
+      "display": "0173 9009 705",
+      "uri": "tel:+491739009705"
+    },
+    "whatsappUrl": "https://wa.me/491739009705",
+    "email": "info@aukr.ug",
+    "instagramUrl": "https://www.instagram.com/aukr.ug/",
+    "mapsUrl": "https://maps.app.goo.gl/QTdb9kVh7BvdgqaW6",
+    "websiteUrl": "https://aukr.ug/",
+    "menuPdf": "assets/menu.pdf",
+    "privacyPolicyUrl": "https://aukr.ug/datenschutz.html",
+    "imprintUrl": "https://aukr.ug/impressum.html"
+  },
+  "openingHours": {
+    "schemaVersion": 1,
+    "timezone": "Europe/Berlin",
+    "regular": [
+      {
+        "day": "fri",
+        "open": "17:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sat",
+        "open": "16:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sun",
+        "open": "16:00",
+        "close": "21:00"
+      }
+    ],
+    "kitchenNote": "Küche bis 21 Uhr",
+    "privateEventsNote": "Feiern & Veranstaltungen auch außerhalb der Öffnungszeiten",
+    "exceptions": []
+  },
+  "notices": {
+    "schemaVersion": 1,
+    "notices": []
+  },
+  "events": {
+    "schemaVersion": 1,
+    "calendar": {
+      "title": "Veranstaltungskalender 2026",
+      "image": "assets/kalender2026.jpg?v=20260825-3",
+      "alt": "Veranstaltungskalender 2026"
+    },
+    "events": [
+      {
+        "id": "schnitzelbuffet",
+        "kind": "event",
+        "title": "Schnitzelbuffet im Aukrug",
+        "shortTitle": "Schnitzelbuffet",
+        "tagline": "Gute Zeit. Gutes Essen.",
+        "start": "2026-10-10T18:30",
+        "highlights": [
+          "Ab 18:30 Uhr · 24,00 € pro Person"
+        ],
+        "description": [
+          "Freut euch auf klassische Schnitzel, Jägerschnitzel, Schnitzel mit Rahmsauce und weitere Variationen – dazu verschiedene Beilagen und frische Salate."
+        ],
+        "closing": "Wir freuen uns auf euch!",
+        "summary": "Verschiedene Schnitzelvariationen, Beilagen und frische Salate für 24,00 € pro Person.",
+        "announce": true,
+        "actions": [
+          {
+            "label": "Jetzt per E-Mail reservieren",
+            "url": "mailto:info@aukr.ug?subject=Reservierung%20Schnitzelbuffet%2010.10.2026"
+          }
+        ],
+        "poster": {
+          "src": "assets/schnitzelbuffet-2026-10-10.jpeg",
+          "alt": "Schnitzelbuffet im Aukrug am Samstag, 10. Oktober 2026, ab 18:30 Uhr – 24 Euro pro Person",
+          "zoomAlt": "Plakat: Schnitzelbuffet am 10. Oktober 2026 ab 18:30 Uhr, 24 Euro pro Person; Reservierung unter info@aukr.ug"
+        },
+        "notify": true
+      },
+      {
+        "id": "federweisser",
+        "kind": "offer",
+        "title": "Federweißer & Zwiebelkuchen",
+        "shortTitle": "Federweißer und Zwiebelkuchen",
+        "tagline": "Der frische Genuss des Herbstes!",
+        "highlights": [
+          "Federweißer · 0,2 Liter · 4,00 €",
+          "Zwiebelkuchen · Stück · 6,00 €"
+        ],
+        "description": [
+          "Herbstzeit im Aukrug: Gut trinken, gut essen – schön bei uns!"
+        ],
+        "summary": "Federweißer (0,2 Liter) für 4,00 € und Zwiebelkuchen für 6,00 € pro Stück.",
+        "announce": false,
+        "actions": [],
+        "poster": {
+          "src": "assets/federweisser-zwiebelkuchen-2026.jpeg",
+          "alt": "Federweißer und Zwiebelkuchen im Aukrug: 0,2 Liter Federweißer für 4,00 Euro, ein Stück Zwiebelkuchen für 6,00 Euro",
+          "zoomAlt": "Plakat: Federweißer, 0,2 Liter für 4,00 Euro, und Zwiebelkuchen, ein Stück für 6,00 Euro, im Aukrug"
+        },
+        "notify": true
+      },
+      {
+        "id": "comedy-magic-dinner",
+        "kind": "event",
+        "title": "Die Comedy Magic Dinner Show!",
+        "shortTitle": "Die Comedy Magic Dinner Show",
+        "tagline": "Das Weihnachtsspezial!",
+        "start": "2027-01-16T19:00",
+        "highlights": [
+          "19:00 / Einlass 18:30 Uhr"
+        ],
+        "description": [
+          "Diese Show mit Zauberkünstler und Entertainer Kevin Köneke liefert Comedy Magic pur: klare Gags, spontane Momente, starke Illusionen und viel Interaktion. Locker und voller Überraschungen. Eine Show, die Spaß macht und immer wieder zum Staunen bringt.",
+          "Ein Abend mit Humor, Magie, richtig guter Unterhaltung und einem Mehrgänge Menü."
+        ],
+        "closing": "Lachen. Staunen. Mitmachen.",
+        "summary": "Comedy, Magie und ein Mehrgänge-Menü mit Kevin Köneke.",
+        "announce": false,
+        "actions": [
+          {
+            "label": "Tickets sichern",
+            "url": "https://www.eventim-light.com/de/a/6929836759181a05a09037a4/e/6a7b522b956ff16800be8179"
+          }
+        ],
+        "poster": {
+          "src": "assets/comedyshow2701.jpeg",
+          "alt": "Die Comedy Magic Dinner Show mit Kevin Köneke – Showplakat"
+        },
+        "notify": true
+      }
+    ]
+  },
+  "menu": {
+    "schemaVersion": 1,
+    "version": "2026-09",
+    "title": "Unsere Karte",
+    "intro": "Regional. Ehrlich. Lecker. Beliebte Klassiker und regionale Spezialitäten – ergänzt um saisonale Gerichte und besondere Highlights.",
+    "footnote": "Reservierung: info@aukr.ug",
+    "categories": [
+      {
+        "id": "zum-start",
+        "title": "Zum Start",
+        "subtitle": "Kleine Köstlichkeiten für den ersten Appetit",
+        "items": [
+          {
+            "name": "Tomatensuppe",
+            "description": "mit Basilikumschaum",
+            "price": 6,
+            "variants": [],
+            "options": [],
+            "choices": [],
+            "tags": []
+          },
+          {
+            "name": "Kürbissuppe",
+            "description": "mit Balsamico und Garnelenspieß",
+            "price": 9,
+            "variants": [],
+            "options": [],
+            "choices": [],
+            "tags": []
+          },
+          {
+            "name": "Matjestatar",
+            "description": "auf hausgemachtem Vollkornbrot, mit Salat",
+            "price": 11,
+            "variants": [],
+            "options": [],
+            "choices": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "id": "gold-aus-der-erde",
+        "title": "Gold aus der Erde",
+        "subtitle": "Ofenkartoffel in köstlichen Variationen",
+        "items": [
+          {
+            "name": "Klassik",
+            "description": "mit Sour Cream & Salatbeilage",
+            "price": 10,
+            "variants": [],
+            "options": [],
+            "choices": [],
+            "tags": []
+          },
+          {
+            "name": "Mexico",
+            "description": "mit Chili con Carne, Sour Cream & Nachos, überbacken mit Käse",
+            "price": 15,
+            "variants": [],
+            "options": [],
+            "choices": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "id": "klassiker",
+        "title": "Unsere Klassiker",
+        "subtitle": "Herzhaft und zeitlos gut",
+        "items": [
+          {
+            "name": "Currywurst",
+            "description": "mit Pommes",
+            "price": 9,
+            "variants": [],
+            "options": [],
+            "choices": [],
+            "tags": []
+          },
+          {
+            "name": "Schnitzel „Wiener Art“",
+            "description": "mit Pommes & Beilagensalat",
+            "price": 16,
+            "variants": [],
+            "options": [
+              {
+                "label": "Champignonsauce",
+                "surcharge": 3
+              },
+              {
+                "label": "wahlweise mit Bratkartoffeln",
+                "surcharge": 3
+              }
+            ],
+            "choices": [],
+            "tags": []
+          },
+          {
+            "name": "Schleusenschnitzel",
+            "description": "mit Zwiebeln, Tomaten & Käse überbacken, mit Pommes & Beilagensalat",
+            "price": 19,
+            "variants": [],
+            "options": [
+              {
+                "label": "wahlweise mit Bratkartoffeln",
+                "surcharge": 3
+              }
+            ],
+            "choices": [],
+            "tags": []
+          },
+          {
+            "name": "Sauerfleisch",
+            "description": "mit Bratkartoffeln, Remoulade",
+            "price": 17,
+            "variants": [],
+            "options": [],
+            "choices": [],
+            "tags": []
+          },
+          {
+            "name": "Rundstück warm",
+            "description": "auf Toast mit würziger Champignonsauce",
+            "price": 13,
+            "variants": [],
+            "options": [],
+            "choices": [],
+            "tags": []
+          },
+          {
+            "name": "Sandwich „Aukrug“",
+            "description": "mit Spiegelei, Bacon, Salat, Remoulade",
+            "variants": [
+              {
+                "label": "mit Matjes",
+                "price": 17
+              },
+              {
+                "label": "mit Schnitzel",
+                "price": 18
+              }
+            ],
+            "options": [],
+            "choices": [],
+            "tags": []
+          },
+          {
+            "name": "Backfischstücke",
+            "description": "mit Pommes und Remoulade",
+            "price": 12,
+            "variants": [],
+            "options": [],
+            "choices": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "id": "pasta",
+        "title": "Pasta",
+        "subtitle": "Dolce Vita am Deich",
+        "items": [
+          {
+            "name": "Garnelen",
+            "description": "in Tomatensauce",
+            "price": 17,
+            "variants": [],
+            "options": [],
+            "choices": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "id": "kleine-gaeste",
+        "title": "Kleine Gäste",
+        "subtitle": "Lieblingsessen für Abenteurer",
+        "items": [
+          {
+            "name": "Pommespiraten",
+            "description": "Hähnchen-Nuggets mit Pommes",
+            "price": 8,
+            "variants": [],
+            "options": [],
+            "choices": [],
+            "tags": []
+          },
+          {
+            "name": "Küstenschnupperer",
+            "description": "Fischstäbchen mit Pommes",
+            "price": 9,
+            "variants": [],
+            "options": [],
+            "choices": [],
+            "tags": []
+          },
+          {
+            "name": "Nudelhelden",
+            "description": "Kleine Portion Pasta mit Tomatensauce oder Butter",
+            "price": 8,
+            "variants": [],
+            "options": [],
+            "choices": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "id": "flammkuchen",
+        "title": "Flammkuchen",
+        "subtitle": "Frisch & knusprig aus dem Ofen",
+        "items": [
+          {
+            "name": "Elsässer Art",
+            "description": "Flammkuchencreme · Speck · Zwiebeln",
+            "price": 11,
+            "variants": [],
+            "options": [],
+            "choices": [],
+            "tags": []
+          },
+          {
+            "name": "Aukrug Spezial",
+            "description": "Flammkuchencreme · Kochschinken · Champignons · Zwiebeln · Cheddar",
+            "price": 12,
+            "variants": [],
+            "options": [],
+            "choices": [],
+            "tags": []
+          },
+          {
+            "name": "Pulled Pork BBQ",
+            "description": "Flammkuchencreme · Pulled Pork · rote Zwiebeln · Cheddar · BBQ-Sauce",
+            "price": 14,
+            "variants": [],
+            "options": [],
+            "choices": [],
+            "tags": []
+          },
+          {
+            "name": "Ziegenkäse & Birne",
+            "description": "Flammkuchencreme · Birne · Ziegenkäse · Walnüsse · Honig",
+            "price": 14,
+            "variants": [],
+            "options": [],
+            "choices": [],
+            "tags": []
+          },
+          {
+            "name": "Vegetarisch",
+            "description": "Flammkuchencreme · Champignons · Paprika · Zwiebeln · Cheddar · Kräuter",
+            "price": 12,
+            "variants": [],
+            "options": [],
+            "choices": [],
+            "tags": [
+              "vegetarian"
+            ]
+          },
+          {
+            "name": "Apfel-Zimt",
+            "description": "Flammkuchencreme · Apfel · Zimt · Zucker · Honig",
+            "price": 9,
+            "variants": [],
+            "options": [],
+            "choices": [],
+            "tags": []
+          }
+        ]
+      },
+      {
+        "id": "zum-dahinschmelzen",
+        "title": "Zum Dahinschmelzen",
+        "items": [
+          {
+            "name": "Pack Eis",
+            "price": 3,
+            "variants": [],
+            "options": [],
+            "choices": [
+              "Quark-Himbeer",
+              "Buttermilch-Limette",
+              "Haselnuss",
+              "Vanille",
+              "Zitrone-Minze",
+              "Joghurt Blaubeer",
+              "Schokolade"
+            ],
+            "tags": []
+          }
+        ]
+      }
+    ]
+  },
+  "pages": {
+    "willkommen": {
+      "title": "Willkommen im Aukrug Borsfleth!",
+      "markdown": "**Schön, dass Sie da sind!**\nMit viel Herz und Engagement erwecken wir die traditionsreiche Gaststätte Aukrug zu neuem Leben – als lebendigen Treffpunkt für unser Dorf, als einladende Anlaufstelle für Gruppen, Vereine und Radfahrer sowie als idyllischen Ort für alle, die auf ihrer Tour eine Auszeit suchen.\n\nDirekt am Mönchsweg gelegen, erwartet Sie unser neuer Biergarten – ein echtes Highlight! Mit weitem Blick über den Deich und die Natur ist er der perfekte Ort, um bei einem kühlen Getränk, einer kleinen Stärkung oder einfach guten Gesprächen den Moment zu genießen. Ob kurze Pause oder langer Sommerabend – hier fühlt sich der Norden zuhause an.\n\nIm frisch modernisierten Restaurant Aukrug heißen wir Sie ebenfalls herzlich willkommen: Freuen Sie sich auf ehrliche, regionale Küche, liebevoll zubereitet, und eine Atmosphäre, die zum Bleiben einlädt. Ob beim entspannten Abendessen, bei einem spontanen Besuch oder im Rahmen einer Familienfeier – wir bieten Ihnen den passenden Rahmen für schöne Stunden.\n\nNach einem Besitzerwechsel und umfassender Erneuerung öffnet der Aukrug nun wieder seine Türen – für Dorfbewohner, Tagesgäste und alle, die echte Gastfreundschaft schätzen. Kommen Sie vorbei, genießen Sie die Atmosphäre und werden Sie Teil unseres lebendigen Aukrugs!\n\n**Wir freuen uns darauf, Sie bald bei uns begrüßen zu dürfen!**"
+    },
+    "raeumlichkeiten": {
+      "title": "Biergarten & Räumlichkeiten",
+      "markdown": "## Genuss unter freiem Himmel – Unser Biergarten\n\nUnser neu gestalteter Biergarten lädt an warmen Tagen zum Verweilen ein: Mit Blick auf den Deich und die Kremper Au mit der Verlathschleuse genießen Sie hier eine entspannte Auszeit mitten in der Natur.\nVom Deich aus eröffnet sich ein einzigartiger Weitblick über den Außenhafen und die weite Landschaft – der perfekte Ort für gesellige Nachmittage und laue Sommerabende mit Familie, Freunden oder auf einer kleinen Fahrradtour.\n\n## Viel Raum für Ihre Anlässe\n\nNeben dem Biergarten bietet unser Restaurant vielseitige, liebevoll eingerichtete Räumlichkeiten: Ob im stilvollen Saal, im einladenden Clubraum, der auch für den Restaurantbetrieb genutzt wird, oder im gemütlichen Schankraum – für jede Feier und jedes Beisammensein finden wir den passenden Rahmen.\nEgal, ob Geburtstag, Hochzeit, Jubiläum oder Vereinsaktivität – wir gestalten Ihre Veranstaltung flexibel und nach Ihren Wünschen. Gerne unterstützen wir Sie auch bei der Organisation, damit Ihr Anlass bei uns etwas ganz Besonderes wird.\n\n![Außenansicht des Restaurants Aukrug](carussel/aussen.jpg)\n![Terrasse des Restaurants Aukrug](carussel/deck.jpg)\n![Innenansicht des Restaurants](carussel/IMG_5783.JPG)\n![Tische im Restaurant](carussel/IMG_5784.JPG)\n![Dekoration im Restaurant](carussel/IMG_5785.JPG)\n![Weitere Dekoration](carussel/IMG_5786.JPG)\n![Blick in den Schankraum](carussel/IMG_5787.JPG)\n![Gemütliche Ecke im Restaurant](carussel/IMG_5788.JPG)\n![Gedeckter Tisch](carussel/innengedeckt.jpg)\n\n## Termine ganz nach Ihren Wünschen\n\nVeranstaltungen und geschlossene Gesellschaften sind bei uns auch außerhalb der regulären Öffnungszeiten möglich – auf Wunsch auch von Montag bis Donnerstag. Sprechen Sie uns an, wir richten uns nach Ihrem Anlass."
+    },
+    "ueber-uns": {
+      "title": "Über uns",
+      "markdown": "## Tradition trifft Zukunft – die neue Gaststätte Aukrug\n\nMit der Wiedereröffnung der Gaststätte Aukrug möchten wir einen lebendigen Ort für Begegnungen schaffen. Ein Platz, an dem Gäste aus Nah und Fern willkommen sind, die Dorfgemeinschaft zusammenkommt und Vereine eine Heimat finden.\n\nUnser Konzept vereint die traditionelle Rolle der Gaststätte als Mittelpunkt des Dorflebens mit neuen Ideen: kulturelle Veranstaltungen, saisonale Speisen und ein einladender Biergarten sind nur einige Bausteine unseres Angebots.\n\nMit einem klaren Konzept, Leidenschaft für Gastfreundschaft und enger Zusammenarbeit mit der Gemeinde möchten wir Tradition und Zukunft verbinden.\n\nSeien Sie Teil dieser neuen alten Geschichte – wir freuen uns auf Sie!\n\n## Hamburger Genuss Michel 2026\n\n![Roter Teppich vor dem Hamburger Michel beim Genuss Michel 2026](assets/GenussMichel2026-poster.jpg)\n\n**Ein besonderer Moment für uns 💛**\nBeim Hamburger Genuss Michel 2026 durften wir das Catering für Friesenkrone übernehmen.\n\nWir sind stolz auf das Vertrauen, dankbar für dieses starke Event und freuen uns auf alles, was noch kommt. 💛\n\n[Video ansehen →](assets/GenussMichel2026.mp4?v=2)\n\n## Deutschlandfunk Reportage\n\n**„Leben und Sterben der Landgasthöfe – Ein Dorf holt seinen Gasthof zurück“**\nDer Deutschlandfunk hat über den Weg unseres Gasthofes berichtet – wie unser Dorf zusammensteht, Tradition bewahrt und Zukunft gestaltet. Hören Sie rein und erfahren Sie mehr über die Geschichte hinter dem Aukrug Borsfleth.\n\n[Beitrag anhören →](https://www.deutschlandfunk.de/leben-und-sterben-der-landgasthoefe-ein-dorf-holt-seinen-gasthof-zurueck-102.html)"
+    },
+    "feiern": {
+      "title": "Feiern & Veranstaltungen",
+      "markdown": "**Feiern auch außerhalb der Öffnungszeiten:** Für Familienfeiern, Firmenevents, Vereinstreffen oder Trauerkaffee öffnen wir gern auch von Montag bis Donnerstag oder zu anderen Zeiten. Sprechen Sie uns einfach an – wir finden den passenden Termin.\n\nOb Geburtstag, Hochzeit, Jubiläum oder Vereinsaktivität: Im stilvollen Saal, im einladenden Clubraum oder im gemütlichen Schankraum finden wir für jede Feier den passenden Rahmen. Gerne unterstützen wir Sie auch bei der Organisation.\n\n**Reservierungen** nehmen wir gern telefonisch oder per E-Mail entgegen. Wir freuen uns auf Ihre Anfrage!"
+    },
+    "impressum": {
+      "title": "Impressum",
+      "markdown": "## Angaben gemäß § 5 DDG\n\nAukrug Borsfleth\nDorfstraße 2\n25376 Borsfleth\n\n**Vertreten durch:**\nTorsten Gerund\n\n**Kontakt:**\nMobil: 0173-9009705\nE-Mail: [info@aukr.ug](mailto:info@aukr.ug)\n\n**Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz:**\n18/091/00447\n\n**Aufsichtsbehörde:**\nAmt Horst-Herzhorn\nOrdnungsamt\nSchulstraße 1\n25358 Horst\nTelefon: 04126 392-0\nE-Mail: [info@amt-horst-herzhorn.de](mailto:info@amt-horst-herzhorn.de)\n\n**Technische Umsetzung und Betreuung der App:**\n[Christoph Schmidt IT Dienstleistungen](https://www.csit.services)\n\n## Haftungsausschluss\n\n### Haftung für Inhalte\n\nDie Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.\n\n### Haftung für Links\n\nUnser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.\n\n### Urheberrecht\n\nDie durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.\n\nRechtstext von der [Kanzlei Hasselbach](https://www.kanzlei-hasselbach.de/), erstellt mit dem [Impressum-Generator](https://websitewissen.com/impressum-generator) von WebsiteWissen.com."
+    },
+    "datenschutz": {
+      "title": "Datenschutzerklärung",
+      "markdown": "## Anbieter und verantwortliche Stelle im Sinne des Datenschutzgesetzes\n\n**Verantwortlich:**\nAukrug Borsfleth\nInh. Torsten Gerund\nDorfstraße 2\n25376 Borsfleth\nTel.: 04824 659\nE-Mail: [info@aukr.ug](mailto:info@aukr.ug)\n\n## Datenschutz in der App „Aukrug“\n\nDieser Abschnitt gilt für unsere App „Aukrug“ für iOS und Android. Die technische Bereitstellung der App erfolgt im Auftrag des Aukrug Borsfleth durch Christoph Schmidt IT Dienstleistungen.\n\n### Abruf von Inhalten\n\nDie App lädt Öffnungszeiten, Hinweise, Veranstaltungen, die Speisekarte und Bilder von unserer Website aukr.ug. Die Website wird über GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA) bereitgestellt. Beim Abruf wird technisch bedingt Ihre IP-Adresse übermittelt; GitHub kann Zugriffsdaten in Server-Logfiles speichern. Die Verarbeitung ist für die Funktion der App erforderlich (Art. 6 Abs. 1 lit. f DSGVO; § 25 Abs. 2 Nr. 2 TDDDG). Eine Übermittlung in die USA kann stattfinden; GitHub ist nach dem EU-US Data Privacy Framework zertifiziert.\n\n### Speicherung auf Ihrem Gerät\n\nDie App speichert die zuletzt geladenen Inhalte sowie Ihre Einstellungen (gewählte Benachrichtigungen und Ihre Entscheidung zur Nutzungsanalyse) ausschließlich lokal auf Ihrem Gerät, damit die App auch ohne Internetverbindung funktioniert. Diese Daten werden beim Löschen der App entfernt.\n\n### Push-Benachrichtigungen\n\nWenn Sie Benachrichtigungen erlauben, informieren wir Sie über neue Veranstaltungen, kurzfristige Hinweise, geänderte Öffnungszeiten, eine neue Speisekarte und allgemeine Neuigkeiten. Für den Versand nutzen wir Firebase Cloud Messaging der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Dabei wird ein gerätespezifisches Registrierungstoken erzeugt und den von Ihnen gewählten Themen zugeordnet. Wir selbst speichern weder das Token noch andere Daten über Sie; Benachrichtigungen werden an alle Abonnenten eines Themas gesendet.\n\nRechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO; § 25 Abs. 1 TDDDG). Sie können Benachrichtigungen jederzeit in der App unter „Einstellungen“ oder in den Systemeinstellungen Ihres Geräts abbestellen. Eine Übermittlung in die USA kann stattfinden; Google ist nach dem EU-US Data Privacy Framework zertifiziert.\n\n### Nutzungsanalyse mit Google Analytics for Firebase\n\nNur wenn Sie ausdrücklich zustimmen, verwenden wir Google Analytics for Firebase der Google Ireland Limited, um zu verstehen, welche Inhalte der App genutzt werden, und die App zu verbessern. Dabei werden eine zufällige App-Instanz-ID, aufgerufene Bildschirme, Interaktionen (zum Beispiel geöffnete Veranstaltungen), Geräte- und Betriebssysteminformationen, die App-Version sowie der ungefähre Standort anhand der gekürzten IP-Adresse verarbeitet. Die Werbe-ID Ihres Geräts wird nicht erhoben, Daten werden nicht für personalisierte Werbung genutzt. Die Speicherdauer der Analysedaten ist auf zwei Monate begrenzt.\n\nRechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO; § 25 Abs. 1 TDDDG). Ohne Ihre Zustimmung ist die Analyse deaktiviert. Sie können Ihre Einwilligung jederzeit in der App unter „Einstellungen“ mit Wirkung für die Zukunft widerrufen. Eine Übermittlung in die USA kann stattfinden; Google ist nach dem EU-US Data Privacy Framework zertifiziert. Weitere Informationen: [Datenschutzerklärung von Google](https://policies.google.com/privacy?hl=de).\n\n### Links zu anderen Apps und Diensten\n\nÜber die App können Sie uns anrufen oder eine E-Mail schreiben sowie WhatsApp, Instagram, Kartendienste und Ticketanbieter öffnen. Dabei verlassen Sie die App; für die Verarbeitung gelten dann die Datenschutzbestimmungen des jeweiligen Anbieters.\n\n### Beschwerderecht\n\nSie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren, zum Beispiel beim Unabhängigen Landeszentrum für Datenschutz Schleswig-Holstein.\n\n## Erhebung und Verarbeitung persönlicher Daten\n\n### Geltungsbereich\n\nSie erhalten als Nutzer unserer Internetseite in dieser Datenschutzerklärung alle notwendigen Informationen über die Art, den Umfang und den Zweck der Erhebung und Verwendung ihrer Daten, die durch den verantwortlichen Anbieter oder Drittanbieter erhoben und verwendet werden.\nDie Erhebung und Nutzung Ihrer Daten erfolgt streng nach den Vorgaben des Bundesdatenschutzgesetzes (BDSG) und des Telemediengesetzes (TMG).\n\n### Erfassung allgemeiner Informationen\n\nMit jedem Zugriff auf dieses Angebot werden durch uns bzw. den Webspace-Provider automatisch Informationen erfasst. Diese Informationen, auch als Server-Logfiles bezeichnet, sind allgemeiner Natur und erlauben keine Rückschlüsse auf Ihre Person.\nErfasst werden unter anderem: Name der Webseite, Datei, Datum, Datenmenge, Webbrowser und Webbrowser-Version, Betriebssystem, der Domainname Ihres Internet-Providers, die sogenannte Referrer-URL (jene Seite, von der aus Sie auf unser Angebot zugegriffen haben) und die IP-Adresse.\nOhne diese Daten wäre es technisch teils nicht möglich, die Inhalte der Webseite auszuliefern und darzustellen. Insofern ist die Erfassung der Daten zwingend notwendig. Darüber hinaus verwenden wir die anonymen Informationen für statistische Zwecke. Sie helfen uns bei der Optimierung des Angebots und der Technik. Wir behalten uns zudem das Recht vor, die Log-Files bei Verdacht auf eine rechtswidrige Nutzung unseres Angebotes nachträglich zu kontrollieren.\n\n### SSL-Verschlüsselung\n\nUnsere Webseite bedient sich einer SSL-Verschlüsselung, wenn es um die Übermittlung vertraulicher oder persönlicher Inhalte unserer Nutzer geht. Diese Verschlüsselung wird zum Beispiel beim Login in den Mitgliederbereich aktiviert. Achten Sie bitte darauf, dass die SSL-Verschlüsselung bei entsprechenden Aktivitäten von Ihrer Seite her aktiviert ist. Der Einsatz der Verschlüsselung ist leicht zu erkennen: Die Anzeige in Ihrer Browserzeile wechselt von „http://“ zu „https://“. Über SSL verschlüsselte Daten sind nicht von Dritten lesbar. Übermitteln Sie Ihre vertraulichen Informationen nur bei aktivierter SSL-Verschlüsselung und wenden Sie sich im Zweifel an uns.\n\n### Kontaktformulare\n\nWenn Sie uns über ein Onlineformular oder per E-Mail kontaktieren, speichern wir die von Ihnen gemachten Angaben, um Ihre Anfrage beantworten und mögliche Anschlussfragen stellen zu können. Ohne eine ausdrücklich erteilte Zustimmung von Ihrer Seite werden diese Daten Dritten nicht zur Kenntnis gebracht. Beachten Sie bitte, dass Daten im Internet allgemein nicht immer sicher übertragen werden. Besonders im E-Mail-Verkehr kann der Schutz beim Datenaustausch nicht garantiert werden.\n\n**Umgang mit personenbezogenen Daten**\nDefinition: Als personenbezogene Daten gelten alle Informationen, anhand derer eine Person eindeutig identifizierbar ist. Es handelt sich somit um Daten, die zu einer Person zurückverfolgt werden können.\nZu diesen personenbezogenen Daten zählen der Vorname und der Name, die Telefonnummer sowie die E-Mail-Adresse.\nDiese Daten werden vom Anbieter nur erhoben, genutzt und gegebenenfalls weitergegeben, sofern der Gesetzgeber dies ausdrücklich erlaubt oder aber der Nutzer in die Erhebung, Bearbeitung, Nutzung und Weitergabe der Daten einwilligt.\n\n**Einbindung von Diensten und Inhalten Dritter**\nUnser Angebot umfasst mitunter Inhalte, Dienste und Leistungen anderer Anbieter. Das sind zum Beispiel Karten, die von Google-Maps zur Verfügung gestellt werden, sowie Grafiken und Bilder anderer Webseiten. Damit diese Daten im Browser des Nutzers aufgerufen und dargestellt werden können, ist die Übermittlung der IP-Adresse zwingend notwendig. Die Anbieter (im Folgenden als „Dritt-Anbieter“ bezeichnet) nehmen also die IP-Adresse des jeweiligen Nutzers wahr.\nAuch wenn wir bemüht sind, ausschließlich Dritt-Anbieter zu nutzen, welche die IP-Adresse nur benötigen, um Inhalte ausliefern zu können, haben wir keinen Einfluss darauf, ob die IP-Adresse möglicherweise gespeichert wird. Dieser Vorgang dient in dem Fall unter anderem statistischen Zwecken. Sofern wir Kenntnis davon haben, dass die IP-Adresse gespeichert wird, weisen wir unsere Nutzer darauf hin.\n\n### WhatsApp Business Kommunikation\n\nWir bieten Ihnen die Möglichkeit, mit uns über WhatsApp Business zu kommunizieren (freiwillig). Wenn Sie uns über WhatsApp anschreiben oder eine Konversation fortsetzen, verarbeiten wir die dabei anfallenden personenbezogenen Daten zur Bearbeitung Ihrer Anfrage, zur Reservierungs- oder Terminabstimmung sowie für ggf. anschließende Rückfragen.\n\n**Zweck der Verarbeitung:** Kundenkommunikation (Anfragen zu Angebot & Veranstaltungen), Reservierungen, organisatorische Rückfragen, Status- oder Rückmeldungen im Rahmen der Vorbereitung einer Leistung.\n\n**Rechtsgrundlage:** Art. 6 Abs. 1 lit. a DSGVO (Einwilligung durch Ihre aktive Kontaktaufnahme via WhatsApp) sowie – sofern die Kommunikation auf eine Reservierung oder Vertragserfüllung abzielt – Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche/vertragliche Maßnahmen). Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen (siehe unten „Widerruf“).\n\n**Arten verarbeiteter Daten:** Ihre bei WhatsApp hinterlegte Telefonnummer, angezeigter Name / Profilname, ggf. Ihr Profilbild (sofern öffentlich), Chat-Inhalte (Textnachrichten, Sprach- oder sonstige Mediendateien), übermittelte Dokumente/Bilder, Zeitstempel und Metadaten (Sende- und Empfangsstatus), ggf. Reservierungs- oder Bestellinformationen, die Sie uns mitteilen. Bitte übermitteln Sie über WhatsApp keine besonders sensiblen Daten (z. B. Gesundheitsdaten, Zahlungsinformationen). Nutzen Sie in diesen Fällen bitte alternative Kontaktwege (Telefon oder E‑Mail).\n\n**Empfänger / Kategorien von Empfängern:** WhatsApp Ireland Limited (4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland) als Anbieter für Nutzer im EWR sowie Meta Platforms, Inc., 1601 Willow Road, Menlo Park, CA 94025, USA (Konzernunternehmen). Es kann nicht ausgeschlossen werden, dass Meta Konzern- und Infrastrukturressourcen in Drittländern nutzt.\n\n**Auftragsverarbeitung / Vertragsbeziehung:** Die Nutzung von WhatsApp Business unterliegt den Geschäfts- und Zusatzbedingungen von WhatsApp/Meta, die u. a. Regelungen zur Datenverarbeitung (einschließlich Auftragsverarbeitung) enthalten. Wir haben im Rahmen der Business-Nutzung die von WhatsApp bereitgestellten vertraglichen Grundlagen akzeptiert.\n\n**Datenübermittlung in Drittländer:** Eine Übertragung personenbezogener Daten in die USA kann stattfinden. Für die Übermittlung stützt sich WhatsApp/Meta nach eigener Aussage u. a. auf das EU‑US Data Privacy Framework (soweit anwendbar) sowie auf EU-Standardvertragsklauseln. Gleichwohl kann kein vollständig risikofreier Schutz vor Zugriffen durch US-Behörden garantiert werden. Wenn Sie dies nicht wünschen, nutzen Sie bitte alternative Kontaktwege (Telefon, E‑Mail).\n\n**Speicherdauer / Löschung:** Wir speichern Chatverläufe nur solange, wie es zur Bearbeitung Ihrer Anfrage bzw. zur Erfüllung (vor-)vertraglicher Zwecke erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen. Danach werden die Inhalte gelöscht oder – soweit möglich – anonymisiert.\n\n**Widerruf / Widerspruch:** Sie können der Nutzung von WhatsApp zur Kommunikation jederzeit widersprechen bzw. eine erteilte Einwilligung mit Wirkung für die Zukunft widerrufen. Senden Sie uns dazu einfach eine entsprechende Nachricht über einen anderen Kanal (Telefon oder E‑Mail). Wir löschen dann – vorbehaltlich gesetzlicher Aufbewahrungsfristen – die laufende Konversation.\n\n**Weitere Informationen von WhatsApp:** Details zur Datenverarbeitung durch WhatsApp finden Sie in der [Datenschutzrichtlinie von WhatsApp](https://www.whatsapp.com/legal/privacy-policy-eea?lang=de).\n\n### Cookies\n\nDiese Webseite verwendet sogenannte Cookies. Das sind Textdateien, die vom Server aus auf Ihrem Rechner gespeichert werden. Sie enthalten Informationen zum Browser, zur IP-Adresse, dem Betriebssystem und zur Internetverbindung. Diese Daten werden von uns nicht an Dritte weitergegeben oder ohne ihre Zustimmung mit personenbezogenen Daten verknüpft.\nCookies erfüllen vor allem zwei Aufgaben. Sie erleichtern Ihnen die Navigation im Mitglieder-Bereich und ermöglichen die korrekte Darstellung der Webseite. Sie werden nicht dazu genutzt, Viren einzuschleusen oder Programme zu starten.\nNutzer haben die Möglichkeit, die Inhalte im öffentlichen Bereich unserer Website auch ohne Cookies aufzurufen. Dazu müssen im Browser die entsprechenden Einstellungen geändert werden. Informieren Sie sich bitte über die Hilfe-Funktion Ihres Browsers, wie Cookies deaktiviert werden. Wir weisen allerdings darauf hin, dass dadurch einige Funktionen dieser Webseite möglicherweise beeinträchtigt werden und der Nutzungskomfort eingeschränkt wird.\n\n### Google Analytics\n\nDiese Website benutzt Google Analytics, einen Webanalysedienst der Google Inc, (1600 Amphitheatre Parkway Mountain View, CA 94043, USA; „Google“). Die Nutzung umfasst die Betriebsart „Universal Analytics“. Hierdurch ist es möglich, Daten, Sitzungen und Interaktionen über mehrere Geräte hinweg einer pseudonymen User-ID zuzuordnen und so die Aktivitäten eines Nutzers geräteübergreifend zu analysieren.\nGoogle Analytics verwendet sog. „Cookies“, Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglichen. Die durch das Cookie erzeugten Informationen über Ihre Benutzung dieser Website werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert. Im Falle der Aktivierung der IP-Anonymisierung auf dieser Website, wird Ihre IP-Adresse von Google jedoch innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum zuvor gekürzt. Nur in Ausnahmefällen wird die volle IP-Adresse an einen Server von Google in den USA übertragen und dort gekürzt. Die im Rahmen von Google Analytics von Ihrem Browser übermittelte IP-Adresse wird nicht mit anderen Daten von Google zusammengeführt. Im Auftrag des Betreibers dieser Website wird Google diese Informationen benutzen, um Ihre Nutzung der Website auszuwerten, um Reports über die Websiteaktivitäten zusammenzustellen und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen gegenüber dem Websitebetreiber zu erbringen. In diesen Zwecken liegt auch unser berechtigtes Interesse an der Datenverarbeitung. Die Rechtsgrundlage für den Einsatz von Google Analytics ist § 15 Abs.3 TMG bzw. Art. 6 Abs. 1 lit. f DSGVO. Sitzungen und Kampagnen werden nach Ablauf einer bestimmten Zeitspanne beendet. Standardmäßig werden Sitzungen nach 30 Minuten ohne Aktivität und Kampagnen nach sechs Monaten beendet. Das Zeitlimit für Kampagnen kann maximal zwei Jahre betragen. Nähere Informationen zu Nutzungsbedingungen und Datenschutz finden Sie unter https://www.google.com/analytics/terms/de.html bzw. unter https://policies.google.com/?hl=de.\nSie können die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website vollumfänglich werden nutzen können. Sie können darüber hinaus die Erfassung der durch das Cookie erzeugten und auf Ihre Nutzung der Website bezogenen Daten (inkl. Ihrer IP-Adresse) an Google sowie die Verarbeitung dieser Daten durch Google verhindern, indem Sie das Browser-Add-on herunterladen und installieren. Opt-Out-Cookies verhindern die zukünftige Erfassung Ihrer Daten beim Besuch dieser Website. Um die Erfassung durch Universal Analytics über verschiedene Geräte hinweg zu verhindern, müssen Sie das Opt-Out auf allen genutzten Systemen durchführen.\n\n### Datensparsamkeit\n\nPersonenbezogene Daten speichern wir gemäß den Grundsätzen der Datenvermeidung und Datensparsamkeit nur so lange, wie es erforderlich ist oder vom Gesetzgeber her vorgeschrieben wird (gesetzliche Speicherfrist). Entfällt der Zweck der erhobenen Informationen oder endet die Speicherfrist, sperren oder löschen wir die Daten.\n\n### Ihre Rechte auf Auskunft, Berichtigung, Sperre, Löschung und Widerspruch\n\nSie haben das Recht, auf Antrag unentgeltlich eine Auskunft über die bei uns gespeicherten personenbezogenen Daten anzufordern und/oder eine Berichtigung, Sperrung oder Löschung zu verlangen. Ausnahmen: Es handelt sich um die vorgeschriebene Datenspeicherung zur Geschäftsabwicklung oder die Daten unterliegen der gesetzlichen Aufbewahrungspflicht.\nFür diese Zwecke kontaktieren Sie uns bitte unter der oben angegebenen Adresse.\nUm eine Datensperre jederzeit berücksichtigen zu können, ist es erforderlich, die Daten für Kontrollzwecke in einer Sperrdatei vorzuhalten. Besteht keine gesetzliche Archivierungspflicht, können Sie auch die Löschung der Daten verlangen. Anderenfalls sperren wir die Daten, sofern Sie dies wünschen.\n\n### Änderung unserer Datenschutzerklärung\n\nUm zu gewährleisten, dass unsere Datenschutzerklärung stets den aktuellen gesetzlichen Vorgaben entspricht, behalten wir uns jederzeit Änderungen vor. Das gilt auch für den Fall, dass die Datenschutzerklärung aufgrund neuer oder überarbeiteter Leistungen, zum Beispiel neuer Serviceleistungen, angepasst werden muss. Die neue Datenschutzerklärung greift dann bei Ihrem nächsten Besuch auf unserer Website."
+    }
+  }
+}

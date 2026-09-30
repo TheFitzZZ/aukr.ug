@@ -1,0 +1,26 @@
+{
+  "name": "@aukrug/tools",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Content validation, website rendering and notification tooling",
+  "type": "module",
+  "scripts": {
+    "validate": "tsx src/cli.ts validate",
+    "render": "tsx src/cli.ts render",
+    "check": "tsx src/cli.ts check",
+    "build-site": "tsx src/cli.ts build-site",
+    "notify": "tsx src/notify-cli.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@aukrug/content": "*",
+    "google-auth-library": "^11.1.0",
+    "tsx": "^4.23.15"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "~6.0.3",
+    "vitest": "^5.0.2"
+  }
+}

@@ -1,4 +1,4 @@
-# Simple workflow for deploying static content to GitHub Pages
+# Validates shared content, deploys the website to GitHub Pages and notifies app users about changes.
 name: Deploy static content to Pages
 
 on:
@@ -22,22 +22,76 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - name: Install content tooling
+        run: npm ci --workspace tools --workspace packages/content --ignore-scripts
+      - name: Test content tooling
+        run: npm test --workspace tools --workspace packages/content
+      - name: Check content and generated files
+        run: npm run content:check
+      - name: Assemble website
+        run: npm run site:build
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: '.'
+          # Website files and content/ only; app and tooling sources are excluded (tools/src/build-site.ts)
+          path: '_site'
+
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  notify:
+    # Runs after the new content is live, so tapping a notification shows fresh data.
+    needs: deploy
+    if: github.event_name == 'push' && vars.FCM_PROJECT_ID != ''
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - name: Install content tooling
+        run: npm ci --workspace tools --workspace packages/content --ignore-scripts
+      - name: Authenticate to Google Cloud (Workload Identity Federation)
+        if: vars.GCP_WORKLOAD_IDENTITY_PROVIDER != ''
+        uses: google-github-actions/auth@v3
+        with:
+          workload_identity_provider: ${{ vars.GCP_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ vars.GCP_SERVICE_ACCOUNT }}
+      - name: Authenticate to Google Cloud (service account key)
+        if: vars.GCP_WORKLOAD_IDENTITY_PROVIDER == ''
+        uses: google-github-actions/auth@v3
+        with:
+          credentials_json: ${{ secrets.FCM_SERVICE_ACCOUNT_JSON }}
+      - name: Send notifications for content changes
+        env:
+          FCM_PROJECT_ID: ${{ vars.FCM_PROJECT_ID }}
+          BEFORE_SHA: ${{ github.event.before }}
+        run: npm run notify --workspace tools -- diff --from "$BEFORE_SHA" --to "$GITHUB_SHA" --target production

@@ -217,6 +217,7 @@
 						</ul>					</nav>
 
 				<!-- Opening Times Section -->
+				<!-- content:opening-hours · generiert aus content/opening-hours.json – dort ändern und "npm run content:render" ausführen -->
 				<div class="opening-times-header">
 					<h2 class="flyer-title">Unsere Öffnungszeiten:</h2>
 					<div class="opening-hours">
@@ -233,9 +234,11 @@
 							<span class="time">16:00–21:00</span>
 						</div>
 					</div>
-					<div class="flyer-cta">Mo-Do geschlossen | K&uuml;che bis 21 Uhr | <a href="kontakt.html" class="flyer-cta__link">Feiern &amp; Veranstaltungen auch au&szlig;erhalb der &Ouml;ffnungszeiten</a></div>
+					<div class="flyer-cta">Mo-Do geschlossen | Küche bis 21 Uhr | <a href="kontakt.html" class="flyer-cta__link">Feiern &amp; Veranstaltungen auch außerhalb der Öffnungszeiten</a></div>
 				</div>
-				<div class="holiday-info" style="display:none;text-align:center;padding:8px 12px;background-color:#3a2a1a;color:#ffd9a8;font-size:0.85rem;border-bottom:1px solid rgba(255,255,255,0.1);"><strong>Hinweis:</strong> Sonntag, 14. Juni: geschlossene Gesellschaft bis 17 Uhr</div>
+				<!-- /content:opening-hours -->
+				<!-- content:notices · generiert aus content/notices.json – dort ändern und "npm run content:render" ausführen -->
+				<!-- /content:notices -->
 
 				<!-- Main -->
 					<div id="main">
@@ -306,6 +309,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/content-visibility.js"></script>
 			<script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
 			<script src="assets/js/carousel.js"></script>
 

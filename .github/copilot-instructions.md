@@ -1,120 +1,55 @@
-# Aukrug Borsfleth Restaurant Website
+# Aukrug Borsfleth – Website, App & Content
 
-Aukrug Borsfleth is a static HTML website for a German restaurant built with the HTML5 UP "Phantom" template. The site features responsive design, SASS stylesheets, and is deployed via GitHub Pages.
+Repository for the German restaurant "Aukrug Borsfleth" (https://aukr.ug):
 
-Always reference these instructions first and fallback to search or bash commands only when you encounter unexpected information that does not match the info here.
+- **Website**: static HTML based on the HTML5 UP "Phantom" template, deployed via GitHub Pages.
+- **Shared content** (`content/`): single source of truth for opening hours, notices, events, the structured menu and app pages.
+- **App** (`app/`): Expo / React Native (TypeScript, Expo Router) for iOS and Android with Firebase Cloud Messaging push notifications.
+
+Always reference these instructions first and fall back to search or shell commands only when you encounter unexpected information.
+
+## Repository Structure
+
+```
+.github/workflows/static.yml   # validate content → deploy Pages → send push notifications for changes
+.github/workflows/notify.yml   # manual push notification (workflow_dispatch)
+content/                       # JSON + Markdown content, content/bundle.json is generated
+packages/content/              # @aukrug/content: zod schemas, date/opening-hours/event helpers, notification topics
+tools/                         # @aukrug/tools: validate, render website blocks, build _site, notify (FCM)
+app/                           # @aukrug/app: Expo app (see app/README.md)
+assets/                        # website CSS (assets/css/main.css – edit directly, there is no SASS source), JS, posters, menu PDF/PNG
+images/, carussel/             # website images and logos
+*.html                         # website pages (index, kalender, menu, kontakt, raemlichkeiten, ueberuns, impressum, datenschutz)
+```
+
+`generic.html`, `elements.html`, `menu-blank.html`, `menu copy.html` and `alter-placeholder/` are template/backup files.
 
 ## Working Effectively
 
-- Bootstrap and build the repository:
-  - `sudo apt-get update && sudo apt-get install -y sass` -- installs SASS compiler. Takes 2-3 minutes. NEVER CANCEL.
-  - `sass assets/sass/main.scss:assets/css/main.css` -- compiles main stylesheet. Takes 1 second.
-  - `sass assets/sass/noscript.scss:assets/css/noscript.css` -- compiles noscript stylesheet. Takes 0.2 seconds.
-
-- Run the website locally:
-  - ALWAYS run the SASS compilation first to ensure stylesheets are up-to-date.
-  - `python3 -m http.server 8000` -- starts local development server
-  - Access website at `http://localhost:8000`
-  - Server starts immediately and serves all static files correctly
-
-- Test the website deployment:
-  - GitHub Pages deployment is handled automatically via `.github/workflows/static.yml`
-  - No build step required in CI - deploys entire repository as-is
-  - CSS files must be pre-compiled before pushing to repository
+- `npm install` in the repository root installs all workspaces (Node 22.13+, 24 LTS recommended).
+- Content changes: edit `content/*.json` / `content/pages/*.md`, then run `npm run content:render`. This validates the content and regenerates:
+  - website blocks between `<!-- content:NAME … -->` and `<!-- /content:NAME -->` markers (opening hours header and notices on all live pages, contact hours on `kontakt.html`, event carousel + poster modals on `index.html`, teasers and calendar image on `kalender.html`) – never edit these blocks by hand;
+  - `content/bundle.json` (served to the app and bundled into it as offline snapshot).
+- `npm run content:check` must pass before pushing (CI fails otherwise).
+- Event/notice expiry: items carry `data-visible-until`; `assets/js/content-visibility.js` removes expired ones in the browser (loaded before `event-carousel.js`).
+- Short-term banners outside the generated blocks can still use `.event-banner` + `assets/js/event-banner.js` with `data-hide-after`.
+- The website menu is an image/PDF (`assets/menu.png`, `assets/menu.pdf`); the app uses `content/menu.json`. Update both when the menu changes and bump `version` to notify app users.
+- Deployment: pushing to `main` runs `.github/workflows/static.yml`, which publishes only `_site/` (website + `content/`, built by `npm run site:build`) – app/tool sources are excluded.
 
 ## Validation
 
-- ALWAYS manually validate any code changes by running the local server and testing in a browser.
-- ALWAYS test these core scenarios after making changes:
-  1. Homepage loads correctly at `http://localhost:8000`
+- Tests: `npm test` (vitest for `packages/content` and `tools`, jest-expo for `app`); types: `npm run typecheck`; app: `cd app && npm run doctor`.
+- Website: run `python3 -m http.server 8000` and check:
+  1. Homepage loads at `http://localhost:8000`, event carousel works
   2. Navigation menu opens and links work
-  3. Menu page displays restaurant menu properly (`http://localhost:8000/menu.html`)
-  4. Contact page loads with map and contact information (`http://localhost:8000/kontakt.html`)
-  5. PDF menu link is accessible (`http://localhost:8000/assets/menu.pdf`)
-- ALWAYS recompile SASS after modifying any `.scss` files in `assets/sass/`
-- You can view and test all website functionality including navigation, responsive design, and social media links.
+  3. Menu page (`/menu.html`), contact page with map (`/kontakt.html`), calendar (`/kalender.html`)
+  4. PDF menu link (`/assets/menu.pdf`)
+- App: `cd app && npm run ios` / `npm run android` (development builds; Expo Go is not supported because of React Native Firebase). Route files live in `app/src/app/`; tests belong in `app/src/__tests__/`.
 
-## Common Tasks
+## Conventions
 
-The following are outputs from frequently run commands. Reference them instead of viewing, searching, or running bash commands to save time.
-
-### Repository Structure
-```
-ls -la [repo-root]
-.github/         # GitHub Actions workflows
-LICENSE.txt      # Creative Commons license
-README.md        # Brief project description  
-README.txt       # Template credits and info
-assets/          # CSS, JS, SASS, fonts, images
-  css/           # Compiled stylesheets (main.css, noscript.css)
-  js/            # JavaScript files (jQuery, main.js, util.js)
-  sass/          # Source SASS files
-  menu.pdf       # Restaurant menu PDF
-datenschutz.html # Privacy policy page
-elements.html    # Template demo elements
-generic.html     # Generic template page
-images/          # Website images and logos
-impressum.html   # Legal imprint page  
-index.html       # Homepage
-kontakt.html     # Contact page
-menu-blank.html  # Blank menu template
-menu.html        # Restaurant menu page
-raemlichkeiten.html # Facilities page
-ueberuns.html    # About us page
-```
-
-### HTML Pages (12 total)
-- **index.html** - Homepage with restaurant intro and opening hours
-- **menu.html** - Restaurant menu with dishes and prices
-- **kontakt.html** - Contact information with map and hours
-- **raemlichkeiten.html** - Information about restaurant facilities
-- **ueberuns.html** - About the restaurant team
-- **impressum.html** - Legal imprint (German requirement)
-- **datenschutz.html** - Privacy policy (German requirement)
-- **generic.html, elements.html, menu-blank.html** - Template files
-
-### SASS Structure
-```
-assets/sass/
-├── main.scss           # Main stylesheet entry point
-├── noscript.scss       # Styles for no-JS fallback
-├── libs/               # Vendor mixins and utilities
-├── base/               # Reset, typography, page basics
-├── components/         # Reusable UI components  
-└── layout/             # Header, footer, main layout
-```
-
-### Key Commands and Timing
-- `sass assets/sass/main.scss:assets/css/main.css` -- 1 second
-- `sass assets/sass/noscript.scss:assets/css/noscript.css` -- 0.2 seconds  
-- `python3 -m http.server 8000` -- starts immediately
-- `curl -s -o /dev/null -w "%{http_code}" http://localhost:8000` -- returns "200" if server running
-
-### Common File Locations
-- **Main entry point**: `index.html`
-- **Stylesheets source**: `assets/sass/main.scss`, `assets/sass/noscript.scss`
-- **Compiled CSS**: `assets/css/main.css`, `assets/css/noscript.css`
-- **JavaScript**: `assets/js/main.js`, `assets/js/util.js`
-- **Restaurant menu**: `menu.html` and `assets/menu.pdf`
-- **Contact info**: `kontakt.html`
-- **Images**: `images/` directory
-- **Deployment config**: `.github/workflows/static.yml`
-
-### Template Information
-Based on "Phantom" template by HTML5 UP (html5up.net) with Creative Commons Attribution 3.0 license. Uses jQuery, Font Awesome icons, and Google Fonts. Responsive design with mobile-friendly navigation menu.
-
-## Development Workflow
-1. Make changes to HTML files or SASS stylesheets
-2. Run `sass assets/sass/main.scss:assets/css/main.css` if SASS was modified
-3. Start local server: `python3 -m http.server 8000`
-4. Test at `http://localhost:8000` - verify homepage, navigation, and changed pages
-5. Test menu page specifically at `http://localhost:8000/menu.html`
-6. Commit changes - CSS files are tracked in git and must be committed
-7. Push to GitHub - automatic deployment via GitHub Pages
-
-## Notes
-- This is a German restaurant website with content in German
-- External CDN resources (fonts, analytics) may be blocked in some environments
-- Website includes social media links (Instagram, phone, maps)
-- All pages share common header/footer structure
-- Mobile-responsive design with collapsible navigation menu
+- Website and app texts are German; the website addresses guests with "Sie" (event posters may use "euch").
+- IDs in `content/` are stable slugs; they are used for deep links (`/events/<id>`) and change detection for notifications.
+- Push topics: `events`, `notices`, `hours`, `menu`, `general`; non-production app builds use `dev-` prefixed topics.
+- React must stay on the version pinned by Expo (root `package.json` `overrides`).
+- External CDN resources (fonts, analytics, cookie manager) may be blocked in some environments.

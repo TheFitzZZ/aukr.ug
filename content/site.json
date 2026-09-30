@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "name": "Aukrug Borsfleth",
+  "shortName": "Aukrug",
+  "tagline": "Restaurant und Biergarten",
+  "owner": "Torsten Gerund",
+  "address": {
+    "street": "Dorfstraße 2",
+    "postalCode": "25376",
+    "city": "Borsfleth"
+  },
+  "coordinates": {
+    "latitude": 53.827081,
+    "longitude": 9.42804
+  },
+  "phone": {
+    "display": "0173 9009 705",
+    "uri": "tel:+491739009705"
+  },
+  "whatsappUrl": "https://wa.me/491739009705",
+  "email": "info@aukr.ug",
+  "instagramUrl": "https://www.instagram.com/aukr.ug/",
+  "mapsUrl": "https://maps.app.goo.gl/QTdb9kVh7BvdgqaW6",
+  "websiteUrl": "https://aukr.ug/",
+  "menuPdf": "assets/menu.pdf",
+  "privacyPolicyUrl": "https://aukr.ug/datenschutz.html",
+  "imprintUrl": "https://aukr.ug/impressum.html"
+}

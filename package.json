@@ -1,0 +1,25 @@
+{
+  "name": "aukr-ug",
+  "private": true,
+  "description": "Website, shared content and mobile app for Aukrug Borsfleth",
+  "workspaces": [
+    "packages/*",
+    "tools",
+    "app"
+  ],
+  "scripts": {
+    "content:validate": "npm run validate --workspace tools",
+    "content:render": "npm run render --workspace tools",
+    "content:check": "npm run check --workspace tools",
+    "site:build": "npm run build-site --workspace tools",
+    "test": "npm run test --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "overrides": {
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
+  }
+}

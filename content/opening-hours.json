@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "timezone": "Europe/Berlin",
+  "regular": [
+    { "day": "fri", "open": "17:00", "close": "22:00" },
+    { "day": "sat", "open": "16:00", "close": "22:00" },
+    { "day": "sun", "open": "16:00", "close": "21:00" }
+  ],
+  "kitchenNote": "Küche bis 21 Uhr",
+  "privateEventsNote": "Feiern & Veranstaltungen auch außerhalb der Öffnungszeiten",
+  "exceptions": []
+}
