@@ -110,8 +110,9 @@ describe('repository content', () => {
   });
 
   it('reports expired content', () => {
-    const hints = findExpiredContent(bundle, new Date('2027-06-01T12:00:00Z'));
-    expect(hints).toContain('content/events.json: "schnitzelbuffet" ist abgelaufen und kann entfernt werden');
+    const fixture = { ...bundle, events };
+    const hints = findExpiredContent(fixture, new Date('2027-06-01T12:00:00Z'));
+    expect(hints).toContain('content/events.json: "buffet" ist abgelaufen und kann entfernt werden');
   });
 });
 
