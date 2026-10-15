@@ -7,6 +7,12 @@ import { detectNotifications } from './changes';
 import { buildMessage, sendNotifications } from './fcm';
 
 const base = loadBundle();
+// Notification fixtures must not depend on the current restaurant offers.
+base.events.events = [{
+  id: 'schnitzelbuffet', kind: 'event', title: 'Schnitzelbuffet', shortTitle: 'Schnitzelbuffet',
+  start: '2026-10-10T18:30', highlights: [], description: [], actions: [],
+  announce: false, notify: true, poster: { src: 'assets/test.jpg', alt: 'Testplakat' },
+}];
 const now = new Date('2026-10-01T10:00:00Z');
 const clone = (): ContentBundle => structuredClone(base);
 
